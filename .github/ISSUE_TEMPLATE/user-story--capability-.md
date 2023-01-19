@@ -7,4 +7,4 @@ assignees: alfa23
 
 ---
 
-_As a_ **role** _I can_ **capability** _so that_ **received benefit**.
+_As a_ **role** _I can_ **capability** _so that I can_ **received benefit**.
