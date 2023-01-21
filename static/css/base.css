@@ -1,3 +1,5 @@
+/* Google Fonts CSS rules reminder - font-family: 'Amatic SC', cursive; font-family: 'Ubuntu', sans-serif; */
+
 html {
     height: 100%;
 }
@@ -7,7 +9,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #f8f8ff;
-    font-family: 'Open Sans';
+    font-family: 'Ubuntu', sans-serif;
 }
 
 /* from Bulma - controls FontAwesome icon behaviour */
@@ -21,8 +23,15 @@ body {
 
 .logo-font {
     text-transform: uppercase;
-    font-family: 'Amatic SC';
-    color: #ff4500
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    color: #f8f8ff
+}
+
+.banner-font {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    font-size: 10rem;
 }
 
 .main-logo-link {
@@ -30,34 +39,33 @@ body {
 }
 
 .shop-now-button {
-    background: #ff4500;
+    background: #dc143c;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;
     color: #f8f8ff;
     min-width: 260px;
 }
 
 .btn-black {
     background: black;
-    color: white;
+    color: #f8f8ff;
 }
 
 .btn-ghost {
     background: #f8f8ff;
-    color: #ff4500;
+    color: #222;
 }
 
-.btn-orangered {
-    background: #ff4500;
+.btn-accent {
+    background: #dc143c;
     color: #f8f8ff;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
     background: #222;
-    color: white;
+    color: #f8f8ff;
 }
 
 .btn-ghost:hover,
@@ -67,11 +75,14 @@ body {
     color: blue;
 }
 
-.btn-orangered:hover,
-.btn-orangered:active,
-.btn-orangered:focus {
-    background: purple;
-    color: yellow;
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-accent:hover,
+.btn-accent:active,
+.btn-accent:focus {
+    background: #ff4500;
+    color: #fff;
 }
 
 .text-black {
@@ -79,7 +90,7 @@ body {
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1.5px solid black !important;
 }
 
 .text-ghost {
@@ -87,27 +98,27 @@ body {
 }
 
 .border-ghost {
-    border: 1px solid #f8f8ff !important;
+    border: 1.5px solid #f8f8ff !important;
 }
 
-.text-orangered {
-    color: #ff4500 !important;
+.text-accent {
+    color: #dc143c !important;
 }
 
-.border-orangered {
-    border: 1px solid #ff4500 !important;
+.border-accent {
+    border: 1.5px solid #dc143c !important;
 }
 
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
-/* fixed top navbar only on medium and up */
+/* Fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -120,4 +131,30 @@ body {
     .header-container {
         padding-top: 164px;
     }
+}
+
+/* Adjust index banner size on medium and below */
+@media (max-width: 992px) {
+    .banner-font {
+        /* text-transform: uppercase;
+        font-family: 'Amatic SC', cursive; */
+        font-size: 7.5rem;
+    }
+
+    .shop-now-button {
+        font-size: 1.75rem;
+    }    
+}
+
+@media (max-width: 600px) {
+    .banner-font {
+        font-size: 5rem;
+    }
+}
+
+/* And slightly larger on xl screens..! */
+@media (min-width: 1920px) {
+    .banner-font {
+       font-size: 12.5rem;
+    }    
 }
