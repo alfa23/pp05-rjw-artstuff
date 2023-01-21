@@ -24,14 +24,14 @@ body {
 .logo-font {
     text-transform: uppercase;
     font-family: 'Amatic SC', cursive;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #f8f8ff
 }
 
 .banner-font {
     text-transform: uppercase;
     font-family: 'Amatic SC', cursive;
-    font-size: 10rem;
+    font-size: 9rem;
 }
 
 .main-logo-link {
@@ -109,6 +109,31 @@ body {
     border: 1.5px solid #dc143c !important;
 }
 
+.bg-accent {
+    background: #dc143c;
+}
+
+/* Wiggle - from: https://codepen.io/Digitango/pen/YQQBXR */
+
+.wiggle a:hover {
+    animation: wiggle 75ms infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: translate(2px, 0);
+    }
+
+    50% {
+        transform: translate(-2px, 0);
+    }
+
+    100% {
+        transform: translate(2px, 0);
+    }
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -138,23 +163,23 @@ body {
     .banner-font {
         /* text-transform: uppercase;
         font-family: 'Amatic SC', cursive; */
-        font-size: 7.5rem;
+        font-size: 7rem;
     }
 
     .shop-now-button {
         font-size: 1.75rem;
-    }    
+    }
 }
 
 @media (max-width: 600px) {
     .banner-font {
-        font-size: 5rem;
+        font-size: 6rem;
     }
 }
 
 /* And slightly larger on xl screens..! */
 @media (min-width: 1920px) {
     .banner-font {
-       font-size: 12.5rem;
-    }    
+        font-size: 12.5rem;
+    }
 }
