@@ -38,6 +38,16 @@ body {
     width: fit-content;
 }
 
+.link-plain {
+    text-decoration: none;
+    color: #f8f8ff;
+}
+
+.link-plain:hover {
+    text-decoration: none;
+    color: #dc143c;
+}
+
 .shop-now-button {
     background: #dc143c;
     font-family: 'Amatic SC', cursive;
@@ -118,8 +128,12 @@ body {
 }
 
 .hr-rev {
-    height: 0.25px;
+    height: 0.1px;
     background-color: #f8f8ff;
+}
+
+.dropdown-item:hover {
+    background-color: #dc143c;
 }
 
 /* Wiggle - from: https://codepen.io/Digitango/pen/YQQBXR */
@@ -175,6 +189,17 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
 
