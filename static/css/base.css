@@ -113,6 +113,15 @@ body {
     background: #dc143c;
 }
 
+.bg-deep {
+    background: #000032;
+}
+
+.hr-rev {
+    height: 0.25px;
+    background-color: #f8f8ff;
+}
+
 /* Wiggle - from: https://codepen.io/Digitango/pen/YQQBXR */
 
 .wiggle a:hover {
@@ -133,6 +142,17 @@ body {
         transform: translate(2px, 0);
     }
 }
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: rgba(0, 0, 25, 0.7);
+	z-index: -1;
+}
+
 
 /* -------------------------------- Media Queries */
 
