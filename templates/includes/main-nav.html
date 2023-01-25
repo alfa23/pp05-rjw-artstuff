@@ -17,10 +17,10 @@
                 Artwear
             </a>
             <div class="dropdown-menu border-0 bg-deep" aria-labelledby="artwear-link">
-                <a href="" class="dropdown-item text-ghost">Back Print Hoodies</a>
-                <a href="" class="dropdown-item text-ghost">Custom Caps</a>
-                <a href="" class="dropdown-item text-ghost">Printed Shirts</a>
-                <a href="" class="dropdown-item text-ghost"><em>All ARTWEAR</em></a>
+                <a href="{% url 'products' %}?category=back_print_hoodies" class="dropdown-item text-ghost">Back Print Hoodies</a>
+                <a href="{% url 'products' %}?category=custom_caps" class="dropdown-item text-ghost">Custom Caps</a>
+                <a href="{% url 'products' %}?category=printed_shirts" class="dropdown-item text-ghost">Printed Shirts</a>
+                <a href="{% url 'products' %}?category=back_print_hoodies,custom_caps,printed_shirts" class="dropdown-item text-ghost"><em>All ARTWEAR</em></a>
             </div>
         </li>
 
@@ -29,9 +29,9 @@
                 Artwork
             </a>
             <div class="dropdown-menu border-0 bg-deep" aria-labelledby="artwork-link">
-                <a href="" class="dropdown-item text-ghost">Ltd. Ed. Prints</a>
-                <a href="" class="dropdown-item text-ghost">Canvas Art</a>
-                <a href="" class="dropdown-item text-ghost"><em>All ARTWORK</em></a>
+                <a href="{% url 'products' %}?category=ltd_ed_prints" class="dropdown-item text-ghost">Ltd. Ed. Prints</a>
+                <a href="{% url 'products' %}?category=canvas_art" class="dropdown-item text-ghost">Canvas Art</a>
+                <a href="{% url 'products' %}?category=ltd_ed_prints,canvas_art" class="dropdown-item text-ghost"><em>All ARTWORK</em></a>
             </div>
         </li>
 
@@ -40,10 +40,10 @@
                 Artstuff Specials
             </a>
             <div class="dropdown-menu border-0 bg-deep" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item text-ghost">New ARTSTUFF</a>
-                <a href="" class="dropdown-item text-ghost">Deal Stuff</a>
-                <a href="" class="dropdown-item text-ghost">Clearance Stuff</a>
-                <a href="" class="dropdown-item text-ghost"><em>All SPECIALS</em></a>
+                <a href="{% url 'products' %}?category=new_artstuff" class="dropdown-item text-ghost">New ARTSTUFF</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item text-ghost">Deal Stuff</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item text-ghost">Clearance Stuff</a>
+                <a href="{% url 'products' %}?category=new_artstuff,deals,clearance" class="dropdown-item text-ghost"><em>All SPECIALS</em></a>
             </div>
         </li>
     </ul>
