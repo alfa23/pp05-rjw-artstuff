@@ -6,7 +6,7 @@
         </div>
     </a>
     <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0 bg-deep" aria-labelledby="mobile-search">
-        <form class="form" method="GET" action="">
+        <form class="form" method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
                 <input class="form-control border border-accent rounded-0" type="text" name="q" placeholder="Search our site">
                 <div class="input-group-append">
@@ -35,16 +35,16 @@
             <p class="my-0">My Stuff</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu border-0 bg-deep" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-                <a href="" class="dropdown-item">Manage Stuff</a>
+                <a href="" class="dropdown-item text-ghost">Manage Stuff</a>
             {% endif %}
-            <a href="" class="dropdown-item">My Profile</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            <a href="" class="dropdown-item text-ghost">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item text-ghost">Logout</a>
         {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            <a href="{% url 'account_signup' %}" class="dropdown-item text-ghost">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item text-ghost">Login</a>
         {% endif %}
     </div>
 </li>

@@ -201,10 +201,8 @@ body {
     body {
         height: calc(100vh - 116px);
     }
-}
 
 /* Adjust index banner size on medium and below */
-@media (max-width: 992px) {
     .banner-font {
         /* text-transform: uppercase;
         font-family: 'Amatic SC', cursive; */
