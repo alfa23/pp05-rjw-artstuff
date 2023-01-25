@@ -5,9 +5,9 @@
                 All <strong>ARTSTUFF</strong>
             </a>
             <div class="dropdown-menu border-0 bg-deep" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item text-ghost">By Price</a>
-                <a href="" class="dropdown-item text-ghost ">By Rating</a>
-                <a href="" class="dropdown-item text-ghost ">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item text-ghost">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item text-ghost ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item text-ghost ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item text-ghost"><em>All ARTSTUFF</em></a>
             </div>
         </li>
