@@ -167,6 +167,15 @@ body {
 	z-index: -1;
 }
 
+.badge-white {
+    background-color: #dc143c;
+}
+
+a.category-badge > span.badge:hover {
+    background: #f8f8ff !important;
+    color: #dc143c !important;
+}
+
 
 /* -------------------------------- Media Queries */
 
