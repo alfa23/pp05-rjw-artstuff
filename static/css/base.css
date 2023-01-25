@@ -66,6 +66,19 @@ body {
     color: #222;
 }
 
+.btn-outline-ghost {
+    background: #f8f8ff;
+    color: #dc143c !important;  /* use important to override link colours for <a> elements */
+    border: 1px solid #dc143c;
+}
+
+.btn-outline-ghost:hover,
+.btn-outline-ghost:active,
+.btn-outline-ghost:focus {
+    background: #ff4500;
+    color: #f8f8ff !important;
+}
+
 .btn-accent {
     background: #dc143c;
     color: #f8f8ff;
