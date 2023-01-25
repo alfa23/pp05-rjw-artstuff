@@ -45,7 +45,7 @@ body {
 
 .link-plain:hover {
     text-decoration: none;
-    color: #dc143c;
+    color: #ff4500;
 }
 
 .shop-now-button {
@@ -133,7 +133,7 @@ body {
 }
 
 .dropdown-item:hover {
-    background-color: #dc143c;
+    background-color: #ff4500;
 }
 
 /* Wiggle - from: https://codepen.io/Digitango/pen/YQQBXR */
