@@ -123,6 +123,7 @@ body {
 .btn-accent:focus {
     background: #ff4500;
     color: #f8f8ff;
+    border: 1.5px solid #ff4500;
 }
 
 .text-black {

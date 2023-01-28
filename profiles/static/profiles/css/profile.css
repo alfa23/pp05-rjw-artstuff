@@ -2,6 +2,11 @@
     border: 1.5px solid #dc143c !important;
 }
 
+.order-history {
+    max-height: 416px; /* height of profile form + submit button */
+    overflow-y: auto;
+}
+
 #profile-update-form .form-control {
     color: #222;
 }
