@@ -131,7 +131,7 @@ body {
 }
 
 .border-black {
-    border: 1.5px solid black !important;
+    border: 1.5px solid #dc143c !important;
 }
 
 .text-ghost {
