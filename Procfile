@@ -1,0 +1,1 @@
+web: gunicorn rjw_artstuff.wsgi:application
