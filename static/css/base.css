@@ -355,9 +355,36 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content a {
-	color: #dc143c; /* text-info */
+	color: #dc143c; /* text-accent */
 }
 
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc143c;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc143c;
+    border-color: #dc143c;
+    border-radius: 0;
+}
 
 /* -------------------------------- Media Queries */
 
