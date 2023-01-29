@@ -26,7 +26,11 @@
     <div class="row">
         <div class="col-12 col-lg-6">
             <p class="text-ghost">Get In Touch</p>
-            
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ contact|crispy }}
+                <button class="btn btn-blue float-right">Submit</button>
+            </form>
         </div>
         <div class="col-12 col-lg-6">
             <p class="text-ghost">Newsletter</p>
