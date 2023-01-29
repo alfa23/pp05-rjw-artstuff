@@ -50,7 +50,13 @@ body {
     color: #f8f8ff;
 }
 
-.link-plain:hover {
+.link-accent {
+    text-decoration: none;
+    color: #dc143c;
+}
+
+.link-plain:hover,
+.link-accent:hover {
     text-decoration: none;
     color: #ff4500;
 }
