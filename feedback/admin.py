@@ -11,6 +11,12 @@ class FeedbackAdmin(admin.ModelAdmin):
         'user_rating',
     )
 
+    list_filter = (
+        'author',
+        'user_rating',
+        'product',
+    )
+
     ordering = ('-created_on',)
 
 

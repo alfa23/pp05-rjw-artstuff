@@ -10,6 +10,7 @@ body {
     height: calc(100vh - 164px);
     color: #f8f8ff;
     font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
 }
 
 /* from Bulma - controls FontAwesome icon behaviour */
@@ -46,11 +47,13 @@ body {
 }
 
 .link-plain {
+    font-weight: 700;
     text-decoration: none;
     color: #f8f8ff;
 }
 
 .link-accent {
+    font-weight: 700;
     text-decoration: none;
     color: #dc143c;
 }
