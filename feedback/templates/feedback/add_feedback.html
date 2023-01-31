@@ -47,19 +47,26 @@
                 enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <div class="my-3">
-                    <a href="{% url 'product_detail' product.id %}" class="btn btn-outline-ghost float-right">Cancel</a>
-                    <button type="submit" class="btn btn-accent float-right">Add Feedback</button>
+                <div class="submit-button text-right mt-2 mb-3">
+                    <a href="{% url 'product_detail' product.id %}" class="btn btn-outline-ghost rounded-0">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="font-weight-bold">Cancel</span>
+                    </a>
+                    <button id="submit-button" class="btn btn-accent rounded-0">
+                        <span class="font-weight-bold">Add Feedback</span>
+                    </button>
                 </div>
             </form>
         </div>
         <div class="col-12 col-lg-6">
-            <p class="text-center">Your Other Feedback</p>
+            <p class="text-center">Your Feedback History</p>
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless text-ghost">
                     <thead>
                         <tr>
-                            <th>Product (click to edit)</th>
+                            <th>Product</th>
                             <th>Title</th>
                             <th>Rating</th>
                         </tr>
@@ -67,13 +74,7 @@
                     <tbody>
                         {% for feedback in feedbacks %}
                         <tr>
-                            <td>
-                                <small>
-                                    <a href="" title="" class="link-plain">
-                                        {{ feedback.product }}
-                                    </a>
-                                </small>
-                            </td>
+                            <td><small>{{ feedback.product }}</small></td>
                             <td><small>{{ feedback.title }}</small></td>
                             <td><small>{{ feedback.user_rating }}</small></td>
                         </tr>

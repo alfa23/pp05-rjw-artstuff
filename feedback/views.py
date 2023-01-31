@@ -43,7 +43,7 @@ def add_feedback(request, product_id):
                 messages.success(request,
                                  'Your product feedback has been submitted')
 
-                update_product_rating(product)
+                # update_product_rating(product)
 
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
@@ -63,23 +63,23 @@ def add_feedback(request, product_id):
     return render(request, template, context)
 
 
-def update_product_rating(product):
-    """ Update the rating field for the product """
+# def update_product_rating(product):
+#     """ Update the rating field for the product """
 
-    total_feedbacks = feedback.objects.filter(product=product)
-    nr_of_total_feedbacks = total_feedbacks.count()
-    ratings_sum = 0
+#     total_feedbacks = feedback.objects.filter(product=product)
+#     nr_of_total_feedbacks = total_feedbacks.count()
+#     ratings_sum = 0
 
-    if nr_of_total_feedbacks <= 0:
-        product.rating = None
-    else:
-        for feedback in total_feedbacks:
-            ratings_sum += feedback.user_rating
+#     if nr_of_total_feedbacks <= 0:
+#         product.rating = None
+#     else:
+#         for feedback in total_feedbacks:
+#             ratings_sum += feedback.user_rating
 
-        # calculate raw_rating average & round to 1dp:
-        raw_rating = ratings_sum / nr_of_total_feedbacks
-        rounded_rating = round(raw_rating, 1)
+#         # calculate raw_rating average & round to 1dp:
+#         raw_rating = ratings_sum / nr_of_total_feedbacks
+#         rounded_rating = round(raw_rating, 1)
 
-        product.rating = rounded_rating
+#         product.rating = rounded_rating
 
-    product.save()
+#     product.save()
