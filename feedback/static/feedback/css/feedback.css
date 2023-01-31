@@ -1,11 +1,17 @@
-.border-black .form-control {
+/* .border-black .form-control {
     border: 1.5px solid #dc143c !important;
-}
+} */
 
 #feedback-form .form-control {
     color: #222;
 }
 
-#feedback-form input::placeholder {
+/* #feedback-form input::placeholder,
+#feedback-form input:focus {
     color: #aab7c4;
+} */
+
+#feedback-form input:focus,
+#feedback-form textarea:focus {
+    background-color: #e6e6fa;
 }

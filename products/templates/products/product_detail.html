@@ -31,7 +31,7 @@
                 <div class="card-body bg-deep pb-0">
                     <h6 class="card-title body-font-bold"><em>{{ feedback.title }}</em></h6>
                     <p class="card-text"><small>{{ feedback.body }}</small></p>
-                    <p class="card-text mb-3 body-font-bold"><small>{{ feedback.created_on }} | Feedback from {{ feedback.author }}</small></p>
+                    <p class="card-text mb-3 body-font-bold"><small>{{ feedback.author }} | {{ feedback.created_on }}</small></p>
                 </div>
             </div>
             {% endfor %}

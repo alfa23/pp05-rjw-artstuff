@@ -25,7 +25,7 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-6">
-            <p class="text-center">Leave Feedback</p>
+            <p class="text-center body-font-bold">Leave Feedback</p>
             <p>Your comments, reviews and suggestions are always appreciated.<br>
                 View the details of any product, click the <em>Leave Feedback</em> button and tell us what you think!</p>
             <p>To talk to us about commissions, projects and collaborations, please use the 
@@ -37,10 +37,13 @@
             </div>
         </div>
         <div class="col-12 col-lg-6">
-            <p class="text-center">Your Other Feedback</p>
+            <p class="text-center body-font-bold">Your Feedback History</p>
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless text-ghost">
                     <thead>
+                        {% if feedbacks.count == 0 %}
+                        <p class="text-center">You haven't left any feedback yet.</p>
+                        {% else %}
                         <tr>
                             <th>Product (click to edit)</th>
                             <th>Date</th>
@@ -63,6 +66,7 @@
                             <td><small>{{ feedback.user_rating }}</small></td>
                         </tr>
                         {% endfor %}
+                        {% endif %}
                     </tbody>
                 </table>
             </div>

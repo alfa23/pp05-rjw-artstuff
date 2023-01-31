@@ -44,8 +44,8 @@
 
             <!-- Add Feedback form -->
             <form action="{% url 'add_feedback' product.id %}" id="feedback-form" class="form mb-2" method="POST"
-                enctype="multipart/form-data">
-                {% csrf_token %}
+            enctype="multipart/form-data">
+            {% csrf_token %}
                 {{ form|crispy }}
                 <div class="submit-button text-right mt-2 mb-3">
                     <a href="{% url 'product_detail' product.id %}" class="btn btn-outline-ghost rounded-0">
@@ -61,6 +61,8 @@
             </form>
         </div>
         <div class="col-12 col-lg-6">
+
+            <!-- Feedback History -->
             <p class="text-center">Your Feedback History</p>
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless text-ghost">
@@ -86,8 +88,3 @@
     </div>
 </div>
 {% endblock %}
-<!-- 
-{% block postloadjs %}
-{{ block.super }}
-<script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
-{% endblock %} -->
