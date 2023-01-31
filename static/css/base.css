@@ -13,6 +13,10 @@ body {
     font-weight: 400;
 }
 
+.body-font-bold {
+    font-weight: 700;
+}
+
 /* from Bulma - controls FontAwesome icon behaviour */
 .icon {
     align-items: center;

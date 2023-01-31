@@ -24,6 +24,7 @@ def view_feedback(request):
 def add_feedback(request, product_id):
     """ Display form to add feedback to a product """
     product = get_object_or_404(Product, pk=product_id)
+    feedbacks = Feedback.objects.filter(author=request.user)
     user_feedback = Feedback.objects.filter(
         author=request.user, product=product)
 
@@ -55,6 +56,7 @@ def add_feedback(request, product_id):
 
     context = {
         'product': product,
+        'feedbacks': feedbacks,
         'form': form,
     }
 

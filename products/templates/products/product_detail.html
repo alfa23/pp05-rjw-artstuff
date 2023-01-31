@@ -25,6 +25,22 @@
                 </a>
                 {% endif %}
             </div>
+            <p class="text-center body-font-bold">Customer Feedback:</p>
+            {% for feedback in feedbacks %}
+            <div class="card w-100 border-ghost mb-2 rounded-0">
+                <div class="card-body bg-deep pb-0">
+                    <h6 class="card-title body-font-bold"><em>{{ feedback.title }}</em></h6>
+                    <p class="card-text"><small>{{ feedback.body }}</small></p>
+                    <p class="card-text mb-3 body-font-bold"><small>{{ feedback.created_on }} | Feedback from {{ feedback.author }}</small></p>
+                </div>
+            </div>
+            {% endfor %}
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'add_feedback' product.id %}" class="btn btn-accent w-100 rounded-0 mt-1 mb-3">
+                <span class="text-uppercase">Leave Product Feedback</span>
+            </a>
+            {% endif %}
+
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">

@@ -1,0 +1,11 @@
+.border-black .form-control {
+    border: 1.5px solid #dc143c !important;
+}
+
+#feedback-form .form-control {
+    color: #222;
+}
+
+#feedback-form input::placeholder {
+    color: #aab7c4;
+}

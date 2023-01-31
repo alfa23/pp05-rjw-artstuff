@@ -29,7 +29,7 @@
             <p>Your comments, reviews and suggestions are always appreciated.<br>
                 View the details of any product, click the <em>Leave Feedback</em> button and tell us what you think!</p>
             <p>To talk to us about commissions, projects and collaborations, please use the 
-                <a href="{% url 'contact' %}" class="link-accent">contact page</a>.</p>
+                <a href="{% url 'contact' %}" class="link-accent">Contact</a> page.</p>
             <div class="my-5 wiggle">
                 <h4>
                     <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3"><strong>Shop Artstuff</strong></a>
@@ -43,6 +43,7 @@
                     <thead>
                         <tr>
                             <th>Product (click to edit)</th>
+                            <th>Date</th>
                             <th>Title</th>
                             <th>Rating</th>
                         </tr>
@@ -57,6 +58,7 @@
                                     </a>
                                 </small>
                             </td>
+                            <td><small>{{ feedback.created_on }}</small></td>
                             <td><small>{{ feedback.title }}</small></td>
                             <td><small>{{ feedback.user_rating }}</small></td>
                         </tr>
