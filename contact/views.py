@@ -17,9 +17,10 @@ def contact(request):
                 Please ensure the form is valid')
     else:
         contact_form = ContactForm()
-
+    newsletter_form = NewsletterForm()
     context = {
         'contact': contact_form,
+        'newsletter': newsletter_form,
     }
 
     return render(request, 'contact/contact.html', context)
@@ -31,11 +32,14 @@ def contact_success(request):
     return render(request, 'contact/contact_success.html')
 
 
-def newsletter_sub(request, context):
+def newsletter_sub(request):
     """ View to handle newsletter subscription """
-    newsletter_form = NewsletterForm()
-    context = {
-        'newsletter': newsletter_form,
-    }
-
-    return redirect(reverse('contact/contact.html'), context)
+    if request.method == 'POST':
+        newsletter_form = NewsletterForm(request.POST)
+        if newsletter_form.is_valid():
+            newsletter_form.save()
+            messages.success(request, 'Subscribed!')
+        else:
+            messages.error(request, 'Failed to subscribe \
+                Please ensure the form is valid')
+    return redirect('contact')

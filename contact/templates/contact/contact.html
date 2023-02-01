@@ -58,14 +58,14 @@
         <!-- Newsletter form & buttons -->
         <div class="col-12 col-lg-6 text-center">
             <p class="body-font-bold">Newsletter</p>
-            <form action="{% url 'contact' %}" method="POST" id="contact-form" class="form mt-5 mb-2"
+            <p class="text-left">Subscribe to our newsletter and stay up-to-date with the 
+                latest <strong>ARTSTUFF</strong> news, new releases, offers and deals.</p>
+            <form action="{% url 'newsletter' %}" method="POST" id="newsletter-form" class="form mt-1 mb-2"
             enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ newsletter|crispy }}
                 <button class="btn btn-accent rounded-0 mb-2 link-plain">Subscribe</button>
             </form>
-            <p class="text-left">Subscribe to our newsletter and stay up-to-date with the 
-                latest <strong>ARTSTUFF</strong> news, new releases, offers and deals.</p>
             <hr class="hr-rev">
             <p class="body-font-bold mt-4">ARTSTUFF Links</p>
             <div class="table-responsive">

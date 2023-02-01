@@ -32,8 +32,8 @@
             <p class="text-center body-font-bold">Edit Feedback</p>
             <p class="text-center">You are currently editing feedback for:</p>
             <div class="my-1">
-                {% if product.image %}
-                <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                {% if feedback.product.image %}
+                <img class="img-fluid" src="{{ feedback.product.image.url }}" alt="{{ product.name }}">
                 {% else %}
                 <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                 {% endif %}

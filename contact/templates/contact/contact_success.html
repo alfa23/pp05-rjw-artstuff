@@ -29,7 +29,7 @@
     <!-- Contact form & buttons -->
     <div class="row">
         <div class="col-12 col-lg-6 text-center">
-            <p class="body-font-bold">Get In Touch</p>
+            <p class="body-font-bold">Thank You!</p>
             <p>Your message has been submitted successfully!<br>Thank you for your enquiry, we will be in touch shortly.</p>
             <p>Some other blurb here..?</p>
             <div class="my-5 wiggle">
@@ -40,9 +40,91 @@
         </div>
 
         <!-- Newsletter form & buttons -->
-        <div class="col-12 col-lg-6">
-            <p class="text-center body-font-bold">Newsletter</p>
-            
+        <div class="col-12 col-lg-6 text-center">
+            <p class="body-font-bold">Newsletter</p>
+            <p class="text-left">Subscribe to our newsletter and stay up-to-date with the 
+                latest <strong>ARTSTUFF</strong> news, new releases, offers and deals.</p>
+                <form action="{% url 'newsletter' %}" method="POST" id="newsletter-form" class="form mt-1 mb-2"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ newsletter|crispy }}
+                <button class="btn btn-accent rounded-0 mb-2 link-plain">Subscribe</button>
+            </form>
+            <hr class="hr-rev">
+            <p class="body-font-bold mt-4">ARTSTUFF Links</p>
+            <div class="table-responsive">
+                <p class="mt-2">Social Medias</p>
+                <table class="table table-sm table-borderless text-ghost">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="https://www.facebook.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="https://www.instagram.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="https://www.tiktok.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="https://www.youtube.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><small>Facebook</small></td>
+                            <td><small>Instagram</small></td>
+                            <td><small>TikTok</small></td>
+                            <td><small>YouTube</small></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr class="hr-rev-sm">
+                <p class="mt-2">Other Platforms</p>
+                <table class="table table-sm table-borderless text-ghost">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="https://www.behance.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="https://www.dribbble.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="https://www.etsy.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-etsy"></i>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="https://www.shopify.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-shopify"></i>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><small>Behance</small></td>
+                            <td><small>Dribbble</small></td>
+                            <td><small>Etsy</small></td>
+                            <td><small>Shopify</small></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

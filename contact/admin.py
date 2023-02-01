@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Contact
+from .models import Contact, Newletter
 
 
 class ContactAdmin(admin.ModelAdmin):
@@ -15,3 +15,12 @@ class ContactAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Contact, ContactAdmin)
+
+
+class NewletterAdmin(admin.ModelAdmin):
+    list_display = (
+        'email',
+    )
+
+
+admin.site.register(Newletter, NewletterAdmin)

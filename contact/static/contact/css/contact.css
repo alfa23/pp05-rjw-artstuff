@@ -3,7 +3,8 @@
 }
 
 #contact-form input:focus,
-#contact-form textarea:focus {
+#contact-form textarea:focus,
+#id_email:focus {
     background-color: #e6e6fa;
 }
 

@@ -40,6 +40,10 @@ body {
     color: #f8f8ff
 }
 
+#delivery-banner {
+    font-size: 0.5rem;
+}
+
 .banner-font {
     text-transform: uppercase;
     font-family: 'Amatic SC', cursive;
