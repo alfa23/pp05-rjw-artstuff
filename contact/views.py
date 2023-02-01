@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
-from .models import Contact
-from .forms import ContactForm
+from .models import Contact, Newletter
+from .forms import ContactForm, NewsletterForm
 
 
 def contact(request):
@@ -27,10 +27,15 @@ def contact(request):
 
 def contact_success(request):
     """ View to contact success page """
-    # contact_form = ContactForm()
 
+    return render(request, 'contact/contact_success.html')
+
+
+def newsletter_sub(request, context):
+    """ View to handle newsletter subscription """
+    newsletter_form = NewsletterForm()
     context = {
-        # 'contact': contact_form,
+        'newsletter': newsletter_form,
     }
 
-    return render(request, 'contact/contact_success.html', context)
+    return redirect(reverse('contact/contact.html'), context)

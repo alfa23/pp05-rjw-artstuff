@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col">
             <hr class="hr-rev">
-            <h2 class="logo-font mb-4 text-center"><strong>Contact</strong></h2>
+            <h2 class="logo-font mb-4 text-center"><strong>Connect</strong></h2>
             <hr class="hr-rev">
         </div>
     </div>
@@ -29,21 +29,118 @@
     <!-- Contact form & buttons -->
     <div class="row">
         <div class="col-12 col-lg-6 text-center">
-            <p class="body-font-bold">Get In Touch</p>
-            <p class="text-left">We are always interested in</p>
-            <form action="{% url 'contact' %}" method="POST" id="contact-form" class="form mt-5 mb-2"
+            <p class="body-font-bold">Contact</p>
+            <p class="text-left">
+                All artworks on this site are lovingly hand-crafted by RJW, a talented and experienced 
+                <span class="body-font-bold">tradigital artist</span> based in the UK.
+            </p>
+            <p class="text-left">
+                Available for hire globally and always interested in discussing <strong>artistic commissions</strong> 
+                or <strong>creative collaborations</strong>.<br>
+                <ul class="text-left">
+                <li>Hand-drawn portraits - <em>pet and human!</em></li>
+                <li>Personalised artworks & illustrations</li>
+                <li>Tattoo flash designs</li>
+                <li>Murals & signwork</li>
+                </ul>
+            </p>
+            <p class="text-left">Simply fill in the form below to start a project enquiry.</p>
+            <form action="{% url 'contact' %}" method="POST" id="contact-form" class="form mt-4 mb-2"
             enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ contact|crispy }}
-                <button class="btn btn-accent rounded-0 mb-2 link-plain">Submit</button>
+                <p class="text-left"><small>All of your personal information will be securely 
+                    stored in accordance with current GDPR standards of compliance.</small></p>
+                <button class="btn btn-accent rounded-0 mb-2 link-plain">Get In Touch</button>
             </form>
         </div>
 
         <!-- Newsletter form & buttons -->
-        <div class="col-12 col-lg-6">
-            <p class="text-center body-font-bold">Newsletter</p>
-            <p>Subscribe to our newsletter and stay up-to-date with the 
-                latest ARTSTUFF news, new releases, offers and deals.</p>
+        <div class="col-12 col-lg-6 text-center">
+            <p class="body-font-bold">Newsletter</p>
+            <form action="{% url 'contact' %}" method="POST" id="contact-form" class="form mt-5 mb-2"
+            enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ newsletter|crispy }}
+                <button class="btn btn-accent rounded-0 mb-2 link-plain">Subscribe</button>
+            </form>
+            <p class="text-left">Subscribe to our newsletter and stay up-to-date with the 
+                latest <strong>ARTSTUFF</strong> news, new releases, offers and deals.</p>
+            <hr class="hr-rev">
+            <p class="body-font-bold mt-4">ARTSTUFF Links</p>
+            <div class="table-responsive">
+                <p class="mt-2">Social Medias</p>
+                <table class="table table-sm table-borderless text-ghost">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="https://www.facebook.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="https://www.instagram.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="https://www.tiktok.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="https://www.youtube.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><small>Facebook</small></td>
+                            <td><small>Instagram</small></td>
+                            <td><small>TikTok</small></td>
+                            <td><small>YouTube</small></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr class="hr-rev-sm">
+                <p class="mt-2">Other Platforms</p>
+                <table class="table table-sm table-borderless text-ghost">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="https://www.behance.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="https://www.dribbble.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="https://www.etsy.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-etsy"></i>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="https://www.shopify.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                    <i class="fab fa-shopify"></i>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><small>Behance</small></td>
+                            <td><small>Dribbble</small></td>
+                            <td><small>Etsy</small></td>
+                            <td><small>Shopify</small></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
