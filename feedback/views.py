@@ -107,22 +107,22 @@ def edit_feedback(request, feedback_id):
     return render(request, template, context)
 
 
-# @login_required
-# def delete_feedback(request, feedback_id):
-#     """ Delete an existing feedback item """
-#     feedback = get_object_or_404(Feedback, pk=feedback_id)
+@login_required
+def delete_feedback(request, feedback_id):
+    """ Delete an existing feedback item """
+    feedback = get_object_or_404(Feedback, pk=feedback_id)
 
-#     if request.user != feedback.author:
-#         messages.error(request, 'You are not authorised \
-#             to delete this feedback.')
-#         return redirect(reverse('product_detail', args=[feedback.product.id]))
+    if request.user != feedback.author:
+        messages.error(request, 'You are not authorised \
+            to delete this feedback.')
+        return redirect(reverse('view_feedback'))
 
-#     feedback.delete()
-#     messages.success(request, 'Your feedback has been deleted!')
-#     print('feedback', feedback)
-#     # update_product_rating(feedback.product)
+    feedback.delete()
+    messages.success(request, 'Your feedback has been deleted!')
+    # print('feedback', feedback)
+    # update_product_rating(feedback.product)
 
-#     return redirect(reverse('product_detail', args=[feedback.product.id]))
+    return redirect(reverse('view_feedback'))
 
 
 # def update_product_rating(product):

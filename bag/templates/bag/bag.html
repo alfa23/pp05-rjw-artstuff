@@ -14,7 +14,7 @@
 <div class="overlay"></div>
 <div class="container mb-2">
 
-    <!-- Main header shopping bag -->
+    <!-- Main header ArtCart (shopping bag) -->
     <div class="row">
         <div class="col">
             <hr class="hr-rev">
@@ -23,6 +23,7 @@
         </div>
     </div>
 
+    <!-- Cart contents -->
     <div class="row">
         <div class="col">
             {% if bag_items %}
@@ -37,7 +38,6 @@
                             <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
-
                     {% for item in bag_items %}
                     <tr>
                         <td class="p-3 w-25">
@@ -56,6 +56,8 @@
                             <p class="my-0 text-ghost">£{{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
+
+                            <!-- Update bag form & buttons -->
                             <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
@@ -94,6 +96,8 @@
                         </td>
                     </tr>
                     {% endfor %}
+
+                    <!-- Cart totals & keep shopping + checkout buttons -->
                     <tr>
                         <td colspan="5" class="pt-5 text-right text-ghost">
                             <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
@@ -126,6 +130,8 @@
                 </table>
             </div>
             {% else %}
+
+            <!-- Alternate code for empty carts -->
             <p class="lead mb-5">Your cart is empty!</p>
             <a href="{% url 'products' %}" class="btn btn-outline-ghost rounded-0 btn-lg">
                 <span class="icon">
@@ -139,10 +145,10 @@
 </div>
 {% endblock %}
 
+<!-- Quantity buttons postloadjs -->
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
-
 <script type="text/javascript">
     // Update quantity on click
     $('.update-link').click(function(e) {
