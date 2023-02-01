@@ -20,7 +20,7 @@
         <div class="col">
             <hr class="hr-rev">
             <h2 class="logo-font mb-4"><strong>Thank You!</strong></h2>
-            <p class="text-ghost">Your order information is below. A confirmation email will be sent to
+            <p>Your order information is below. A confirmation email will be sent to
                 <strong>{{ order.email }}</strong>.</p>
             <hr class="hr-rev">
         </div>
@@ -193,7 +193,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-lg-7 text-right">
+        <div class="col-12 col-lg-7 text-center">
             {% if from_profile %}
             <a href="{% url 'profile' %}" class="btn btn-outline-ghost rounded-0 my-2">
                 <span class="icon mr-2">
@@ -202,7 +202,7 @@
                 <span class="text-uppercase">Back to Profile</span>
             </a>
             {% else %}
-            <a href="{% url 'products' %}?category=new_artstuff,deals,clearance" class="btn btn-accent rounded-0 my-2">
+            <a href="{% url 'products' %}?category=new_artstuff,deals,clearance" class="btn btn-accent rounded-0 my-3">
                 <span class="icon mr-2">
                     <i class="fas fa-gifts text-ghost"></i>
                 </span>
