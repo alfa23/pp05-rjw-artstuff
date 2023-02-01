@@ -17,7 +17,7 @@
 <div class="overlay"></div>
 <div class="container">
 
-    <!-- Main Header: Add Feedback -->
+    <!-- Main header edit feedback -->
     <div class="row">
         <div class="col">
             <hr class="hr-rev">
@@ -26,11 +26,11 @@
         </div>
     </div>
 
-    <!-- Feedback product details -->
+    <!-- Edit feedback product -->
     <div class="row">
         <div class="col-12 col-lg-6">
-            <p class="text-center">Edit Feedback</p>
-            <p class="text-accent text-center">You are currently editing feedback for:</p>
+            <p class="text-center body-font-bold">Edit Feedback</p>
+            <p class="text-center">You are currently editing feedback for:</p>
             <div class="my-1">
                 {% if product.image %}
                 <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -39,16 +39,16 @@
                 {% endif %}
             </div>
             <div>
-                <p class="text-center text-center my-3"><strong>{{ product.name }}</strong></p>
+                <p class="text-center text-center my-3"><strong>{{ feedback.product }}</strong></p>
             </div>
 
-            <!-- Add Feedback form -->
+            <!-- Edit feedback form -->
             <form action="{% url 'edit_feedback' feedback.id %}" id="feedback-form" class="form mb-2" method="POST"
             enctype="multipart/form-data">
             {% csrf_token %}
                 {{ form|crispy }}
                 <div class="submit-button text-right mt-2 mb-3">
-                    <a href="{% url 'product_detail' product.id %}" class="btn btn-outline-ghost rounded-0">
+                    <a href="{% url 'view_feedback' %}" class="btn btn-outline-ghost rounded-0">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
@@ -62,25 +62,37 @@
         </div>
         <div class="col-12 col-lg-6">
 
-            <!-- Feedback History -->
-            <p class="text-center">Your Feedback History</p>
+            <!-- User feedback history -->
+            <p class="text-center body-font-bold">Your Other Feedback</p>
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless text-ghost">
                     <thead>
+                        {% if feedbacks.count == 0 %}
+                        <p class="text-center">You haven't left any other feedback yet.</p>
+                        {% else %}
                         <tr>
-                            <th>Product</th>
+                            <th>Product (click to edit)</th>
                             <th>Title</th>
                             <th>Rating</th>
+                            <th>Date</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for feedback in feedbacks %}
                         <tr>
-                            <td><small>{{ feedback.product }}</small></td>
+                            <td>
+                                <small>
+                                    <a href="{% url 'edit_feedback' feedback.id %}" title="" class="link-plain">
+                                        {{ feedback.product }}
+                                    </a>
+                                </small>
+                            </td>
                             <td><small>{{ feedback.title }}</small></td>
                             <td><small>{{ feedback.user_rating }}</small></td>
+                            <td><small>{{ feedback.created_on }}</small></td>
                         </tr>
                         {% endfor %}
+                        {% endif %}
                     </tbody>
                 </table>
             </div>

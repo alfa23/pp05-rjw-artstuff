@@ -17,7 +17,7 @@
 <div class="overlay"></div>
 <div class="container">
 
-    <!-- Main Header: Add Feedback -->
+    <!-- Main header add feedback -->
     <div class="row">
         <div class="col">
             <hr class="hr-rev">
@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <!-- Feedback product details -->
+    <!-- Add feedback product details -->
     <div class="row">
         <div class="col-12 col-lg-6">
             <p class="text-center">Leave Feedback</p>
@@ -42,7 +42,7 @@
                 <p class="text-center text-center my-3"><strong>{{ product.name }}</strong></p>
             </div>
 
-            <!-- Add Feedback form -->
+            <!-- Add feedback form -->
             <form action="{% url 'add_feedback' product.id %}" id="feedback-form" class="form mb-2" method="POST"
             enctype="multipart/form-data">
             {% csrf_token %}
@@ -62,25 +62,37 @@
         </div>
         <div class="col-12 col-lg-6">
 
-            <!-- Feedback History -->
+            <!-- User feedback history -->
             <p class="text-center">Your Feedback History</p>
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless text-ghost">
                     <thead>
+                        {% if feedbacks.count == 0 %}
+                        <p class="text-center">You haven't left any feedback yet.</p>
+                        {% else %}
                         <tr>
-                            <th>Product</th>
+                            <th>Product (click to edit)</th>
                             <th>Title</th>
                             <th>Rating</th>
+                            <th>Date</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for feedback in feedbacks %}
                         <tr>
-                            <td><small>{{ feedback.product }}</small></td>
+                            <td>
+                                <small>
+                                    <a href="{% url 'edit_feedback' feedback.id %}" title="" class="link-plain">
+                                        {{ feedback.product }}
+                                    </a>
+                                </small>
+                            </td>
                             <td><small>{{ feedback.title }}</small></td>
                             <td><small>{{ feedback.user_rating }}</small></td>
+                            <td><small>{{ feedback.created_on }}</small></td>
                         </tr>
                         {% endfor %}
+                        {% endif %}
                     </tbody>
                 </table>
             </div>

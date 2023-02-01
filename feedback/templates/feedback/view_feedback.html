@@ -16,6 +16,8 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container">
+
+    <!-- Main header view feedback -->
     <div class="row">
         <div class="col">
             <hr class="hr-rev">
@@ -23,6 +25,8 @@
             <hr class="hr-rev">
         </div>
     </div>
+
+    <!-- Leave feedback details -->
     <div class="row">
         <div class="col-12 col-lg-6">
             <p class="text-center body-font-bold">Leave Feedback</p>
@@ -36,6 +40,8 @@
                 </h4>
             </div>
         </div>
+
+        <!-- User feedback history -->
         <div class="col-12 col-lg-6">
             <p class="text-center body-font-bold">Your Feedback History</p>
             <div class="order-history table-responsive">
@@ -46,9 +52,9 @@
                         {% else %}
                         <tr>
                             <th>Product (click to edit)</th>
-                            <th>Date</th>
                             <th>Title</th>
                             <th>Rating</th>
+                            <th>Date</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,9 +67,9 @@
                                     </a>
                                 </small>
                             </td>
-                            <td><small>{{ feedback.created_on }}</small></td>
                             <td><small>{{ feedback.title }}</small></td>
                             <td><small>{{ feedback.user_rating }}</small></td>
+                            <td><small>{{ feedback.created_on }}</small></td>
                         </tr>
                         {% endfor %}
                         {% endif %}
@@ -74,8 +80,3 @@
     </div>
 </div>
 {% endblock %}
-<!-- 
-{% block postloadjs %}
-{{ block.super }}
-<script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
-{% endblock %} -->

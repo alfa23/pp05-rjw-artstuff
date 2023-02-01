@@ -69,23 +69,25 @@ def add_feedback(request, product_id):
 def edit_feedback(request, feedback_id):
     """ Display form to allow users to edit their feedback """
     feedback = get_object_or_404(Feedback, pk=feedback_id)
+    feedbacks = (
+        Feedback.objects.filter(author=request.user).exclude(pk=feedback_id)
+    )
 
     if request.user != feedback.author:
         messages.error(
             request, 'You are not authorised to edit this feedback.'
         )
-        return redirect(reverse('product_detail', args=[feedback.product.id]))
+        return redirect(reverse('view_feedback'))
 
     if request.method == 'POST':
-        form = FeedbackForm(request.POST, request.FILES, instance=feedback)
+        form = FeedbackForm(request.POST, instance=feedback)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated your feedback!')
 
             # update_product_rating(feedback.product)
 
-            return redirect(reverse('product_detail',
-                            args=[feedback.product.id]))
+            return redirect('view_feedback')
         else:
             messages.error(request, 'Failed to update your feedback. \
                 Please ensure the form is valid.')
@@ -99,27 +101,28 @@ def edit_feedback(request, feedback_id):
     context = {
         'form': form,
         'feedback': feedback,
+        'feedbacks': feedbacks,
     }
 
     return render(request, template, context)
 
 
-@login_required
-def delete_feedback(request, feedback_id):
-    """ Delete an existing feedback item """
-    feedback = get_object_or_404(Feedback, pk=feedback_id)
+# @login_required
+# def delete_feedback(request, feedback_id):
+#     """ Delete an existing feedback item """
+#     feedback = get_object_or_404(Feedback, pk=feedback_id)
 
-    if request.user != feedback.author:
-        messages.error(request, 'You are not authorised \
-            to delete this feedback.')
-        return redirect(reverse('product_detail', args=[feedback.product.id]))
+#     if request.user != feedback.author:
+#         messages.error(request, 'You are not authorised \
+#             to delete this feedback.')
+#         return redirect(reverse('product_detail', args=[feedback.product.id]))
 
-    feedback.delete()
-    messages.success(request, 'Your feedback has been deleted!')
-    print('feedback', feedback)
-    # update_product_rating(feedback.product)
+#     feedback.delete()
+#     messages.success(request, 'Your feedback has been deleted!')
+#     print('feedback', feedback)
+#     # update_product_rating(feedback.product)
 
-    return redirect(reverse('product_detail', args=[feedback.product.id]))
+#     return redirect(reverse('product_detail', args=[feedback.product.id]))
 
 
 # def update_product_rating(product):
