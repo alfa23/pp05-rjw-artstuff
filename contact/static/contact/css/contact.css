@@ -1,0 +1,12 @@
+#contact-form .form-control {
+    color: #222;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    background-color: #e6e6fa;
+}
+
+.btn-center {
+    text-align: center;
+}

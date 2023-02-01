@@ -30,20 +30,19 @@
     <div class="row">
         <div class="col-12 col-lg-6 text-center">
             <p class="body-font-bold">Get In Touch</p>
-            <p class="text-left">We are always interested in</p>
-            <form action="{% url 'contact' %}" method="POST" id="contact-form" class="form mt-5 mb-2"
-            enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ contact|crispy }}
-                <button class="btn btn-accent rounded-0 mb-2 link-plain">Submit</button>
-            </form>
+            <p>Your message has been submitted successfully!<br>Thank you for your enquiry, we will be in touch shortly.</p>
+            <p>Some other blurb here..?</p>
+            <div class="my-5 wiggle">
+                <h4>
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3"><strong>Shop Artstuff</strong></a>
+                </h4>
+            </div>
         </div>
 
         <!-- Newsletter form & buttons -->
         <div class="col-12 col-lg-6">
             <p class="text-center body-font-bold">Newsletter</p>
-            <p>Subscribe to our newsletter and stay up-to-date with the 
-                latest ARTSTUFF news, new releases, offers and deals.</p>
+            
         </div>
     </div>
 </div>
