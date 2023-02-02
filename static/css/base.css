@@ -323,6 +323,10 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+.allauth-form-inner-content input:focus {
+    background-color: #e6e6fa;
+}
+
 .allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
 }
@@ -347,6 +351,7 @@ input[name='q']::placeholder {
     border: 1.5px solid #dc143c;
     padding: .375rem .75rem;
     font-size: 1rem;
+    font-weight: 700;
     line-height: 1.5;
     border-radius: 0;
 
@@ -363,6 +368,7 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content a {
 	color: #dc143c; /* text-accent */
+    font-weight: 700;
 }
 
 /* Product Form */

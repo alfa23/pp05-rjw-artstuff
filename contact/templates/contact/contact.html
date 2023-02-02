@@ -44,6 +44,8 @@
                     <li>Murals & signwork</li>
                 </ul>
             </p>
+            <p class="text-left">If you are considering a piece you plan to give as a gift, please be aware that 
+                there is currently a 2 to 3 week turnaround on most projects, subject to your requirements.</p>
             <p class="text-left">Simply fill out the form below to start a project enquiry.</p>
             <form action="{% url 'contact' %}" method="POST" id="contact-form" class="form mt-4 mb-2"
                 enctype="multipart/form-data">
@@ -51,7 +53,12 @@
                 {{ contact|crispy }}
                 <p class="text-left"><small>All of your personal information will be securely
                         stored in accordance with current GDPR standards of compliance.</small></p>
-                <button class="btn btn-accent rounded-0 mb-2 link-plain">Get In Touch</button>
+                <button class="btn btn-accent rounded-0 mb-2 link-plain">
+                    <span class="font-weight-bold">Send Message</span>
+                        <span class="icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </span>
+                    </button>
             </form>
         </div>
 

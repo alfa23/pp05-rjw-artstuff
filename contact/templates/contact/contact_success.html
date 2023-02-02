@@ -29,12 +29,18 @@
     <!-- Contact form & buttons -->
     <div class="row">
         <div class="col-12 col-lg-6 text-center">
-            <p class="body-font-bold">Thank You!</p>
-            <p>Your message has been submitted successfully!<br>Thank you for your enquiry, we will be in touch shortly.</p>
-            <p>Some other blurb here..?</p>
+            <p class="body-font-bold">Your message has been submitted successfully</p>
+            <p class="text-left">Thank you for your enquiry, we usually respond within 48 hours.</p>
+            <p class="text-left">We will initially contact you to further discuss your idea and agree on a finished  
+                project outcome. Shortly after you will receive a projected timescale and cost from us, including any 
+                concept sketches as appropriate.</p>
+            <p class="text-left">Everything is free and no-obligation up until this point, so you 
+                don't need to think about paying for anything until you're sure you want to proceed.</p>
             <div class="my-5 wiggle">
                 <h4>
-                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3"><strong>Shop Artstuff</strong></a>
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
+                        <strong>Shop Artstuff</strong>
+                    </a>
                 </h4>
             </div>
         </div>
@@ -42,9 +48,9 @@
         <!-- Newsletter form & buttons -->
         <div class="col-12 col-lg-6 text-center">
             <p class="body-font-bold">Newsletter</p>
-            <p class="text-left">Subscribe to our newsletter and stay up-to-date with the 
+            <p class="text-left">Subscribe to our newsletter and stay up-to-date with the
                 latest <strong>ARTSTUFF</strong> news, new releases, offers and deals.</p>
-                <form action="{% url 'newsletter' %}" method="POST" id="newsletter-form" class="form mt-1 mb-2"
+            <form action="{% url 'newsletter' %}" method="POST" id="newsletter-form" class="form mt-1 mb-2"
                 enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ newsletter|crispy }}
@@ -58,22 +64,26 @@
                     <thead>
                         <tr>
                             <th>
-                                <a href="https://www.facebook.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                <a href="https://www.facebook.com/" target="_blank"
+                                    class="btn btn-ghost btn-lg btn-floating link-plain rounded-0">
                                     <i class="fab fa-facebook"></i>
                                 </a>
                             </th>
                             <th>
-                                <a href="https://www.instagram.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                <a href="https://www.instagram.com/" target="_blank"
+                                    class="btn btn-ghost btn-lg btn-floating link-plain rounded-0">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </th>
                             <th>
-                                <a href="https://www.tiktok.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                <a href="https://www.tiktok.com/" target="_blank"
+                                    class="btn btn-ghost btn-lg btn-floating link-plain rounded-0">
                                     <i class="fab fa-tiktok"></i>
                                 </a>
                             </th>
                             <th>
-                                <a href="https://www.youtube.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                <a href="https://www.youtube.com/" target="_blank"
+                                    class="btn btn-ghost btn-lg btn-floating link-plain rounded-0">
                                     <i class="fab fa-youtube"></i>
                                 </a>
                             </th>
@@ -94,22 +104,26 @@
                     <thead>
                         <tr>
                             <th>
-                                <a href="https://www.behance.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                <a href="https://www.behance.com/" target="_blank"
+                                    class="btn btn-ghost btn-lg btn-floating link-plain rounded-0">
                                     <i class="fab fa-behance"></i>
                                 </a>
                             </th>
                             <th>
-                                <a href="https://www.dribbble.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                <a href="https://www.dribbble.com/" target="_blank"
+                                    class="btn btn-ghost btn-lg btn-floating link-plain rounded-0">
                                     <i class="fab fa-dribbble"></i>
                                 </a>
                             </th>
                             <th>
-                                <a href="https://www.etsy.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                <a href="https://www.etsy.com/" target="_blank"
+                                    class="btn btn-ghost btn-lg btn-floating link-plain rounded-0">
                                     <i class="fab fa-etsy"></i>
                                 </a>
                             </th>
                             <th>
-                                <a href="https://www.shopify.com/" target="_blank" class="btn btn-ghost btn-lg btn-floating link-plain">
+                                <a href="https://www.shopify.com/" target="_blank"
+                                    class="btn btn-ghost btn-lg btn-floating link-plain rounded-0">
                                     <i class="fab fa-shopify"></i>
                                 </a>
                             </th>
@@ -125,6 +139,18 @@
                     </tbody>
                 </table>
             </div>
+            <hr class="hr-rev">
+            <p class="body-font-bold mt-4">Businesses We Are Proud To Work With</p>
+            <a href="https://www.gildan.com/" class="text-center link-plain mt-2">Gildan Apparel</a>
+            <p class="text-left mt-1 bus-text">All <strong>ARTSTUFF ArtWear</strong> designs 
+                are printed on to quality shirts and hoodies from <a href="https://www.gildan.com/" class="link-plain">
+                <strong>Gildan</strong></a>, one of the world's leading manufacturers of apparel.
+            </p>
+            <a href="https://www.finerworks.com/" class="text-center link-plain mt-2">FinerWorks</a>
+            <p class="text-left mt-1 bus-text">All <strong>ARTSTUFF ArtWork</strong> designs are 
+                printed using top quality inks, paper and canvas from <a href="https://www.finerworks.com/" class="link-plain">
+                <strong>FinerWorks</strong></a>, a major operative in the fine art industry.
+            </p>
         </div>
     </div>
 </div>

@@ -10,7 +10,7 @@ def contact(request):
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
             contact_form.save()
-            messages.success(request, 'Message received!')
+            messages.success(request, 'Your message has been received.')
             return redirect('contact_success')
         else:
             messages.error(request, 'Failed to submit message \
@@ -28,8 +28,12 @@ def contact(request):
 
 def contact_success(request):
     """ View to contact success page """
+    newsletter_form = NewsletterForm()
+    context = {
+        'newsletter': newsletter_form,
+    }
 
-    return render(request, 'contact/contact_success.html')
+    return render(request, 'contact/contact_success.html', context)
 
 
 def newsletter_sub(request):
@@ -38,7 +42,7 @@ def newsletter_sub(request):
         newsletter_form = NewsletterForm(request.POST)
         if newsletter_form.is_valid():
             newsletter_form.save()
-            messages.success(request, 'Subscribed!')
+            messages.success(request, 'You have been subscribed!')
         else:
             messages.error(request, 'Failed to subscribe \
                 Please ensure the form is valid')
