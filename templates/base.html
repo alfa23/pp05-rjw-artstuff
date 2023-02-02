@@ -38,9 +38,12 @@
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
-
+    
     {% block extra_js %}
     {% endblock %}
+    
+    <!-- Link to favicon.ico from static/favicon -->
+    <link rel="shortcut icon" href="{%  static 'favicon/favicon.ico' %}">
 
     <title>RJW ARTSTUFF {% block extra_title %}{% endblock %}</title>
 </head>
@@ -57,7 +60,7 @@
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-accent rounded-0" type="text" name="q"
-                            placeholder="Search our site">
+                            placeholder="Search ARTSTUFF">
                         <div class="input-group-append">
                             <button class="form-control btn btn-accent border border-accent rounded-0" type="submit">
                                 <span class="icon">
