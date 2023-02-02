@@ -19,15 +19,15 @@
     <div class="row">
         <div class="col">
             <hr class="hr-rev">
-            <h2 class="logo-font mb-4"><strong>Thank You!</strong></h2>
-            <p>Your order information is below. A confirmation email will be sent to
+            <h2 class="logo-font mb-4 text-center"><strong>Thank You!</strong></h2>
+            <p class="text-center">Your order information is below. A confirmation email will be sent to
                 <strong>{{ order.email }}</strong>.</p>
             <hr class="hr-rev">
         </div>
     </div>
 
     <div class="row">
-        <div class="col-12 col-lg-7">
+        <div class="col-12 col-lg-7 mx-auto">
             <div class="order-confirmation-wrapper p-2 border border-ghost">
                 <div class="row">
                     <div class="col">
@@ -193,7 +193,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-lg-7 text-center">
+        <div class="col-12 col-lg-7 mx-auto">
             {% if from_profile %}
             <a href="{% url 'profile' %}" class="btn btn-outline-ghost rounded-0 my-2">
                 <span class="icon mr-2">
