@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap: https://pp05-rjw-artstuff.herokuapp.com/sitemap.xml
