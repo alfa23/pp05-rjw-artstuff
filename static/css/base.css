@@ -46,6 +46,12 @@ body {
     font-size: 9rem;
 }
 
+.banner-font-404 {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    font-size: 5rem;
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -433,11 +439,17 @@ input[name='q']::placeholder {
         height: calc(100vh - 116px);
     }
 
-/* Adjust index banner size */
+/* Adjust index banner-font size */
     .banner-font {
         text-transform: uppercase;
         font-family: 'Amatic SC', cursive;
         font-size: 7rem;
+    }
+    
+    .banner-font-404 {
+        text-transform: uppercase;
+        font-family: 'Amatic SC', cursive;
+        font-size: 3.5rem;
     }
 
     .display-4.logo-font.text-black {
@@ -486,6 +498,10 @@ input[name='q']::placeholder {
 @media (max-width: 600px) {
     .banner-font {
         font-size: 6rem;
+    }
+
+    .banner-font-404 {
+        font-size: 2.5rem;
     }
 }
 
