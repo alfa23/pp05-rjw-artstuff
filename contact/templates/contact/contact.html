@@ -26,8 +26,8 @@
         </div>
     </div>
 
-    <!-- Contact form & buttons -->
     <div class="row">
+        <!-- Contact form & buttons -->
         <div class="col-12 col-lg-6 text-center">
             <p class="body-font-bold">Contact</p>
             <p class="text-left">
@@ -51,8 +51,10 @@
                 enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ contact|crispy }}
-                <p class="text-left"><small>All of your personal information will be securely
-                        stored in accordance with current GDPR standards of compliance.</small></p>
+                <p class="text-center"><small><span class="body-font-bold">We care about your privacy</span><br>
+                    <strong>RJW ARTSTUFF</strong> is committed to respecting your privacy and protecting your 
+                    personal data.</small>
+                </p>
                 <button class="btn btn-accent rounded-0 mb-2 link-plain">
                     <span class="font-weight-bold">Send Message</span>
                         <span class="icon">
@@ -168,6 +170,14 @@
                 paper and canvas from <a href="https://www.finerworks.com/" class="link-plain" name="FinerWorks" rel="external">
                 <strong>FinerWorks</strong></a>, a major operative in the fine art industry.
             </p>
+        </div>
+    </div>
+
+    <!-- Privacy policy link -->
+    <div class="row">
+        <div class="col text-center mb-3">
+            <a href="https://www.privacypolicygenerator.info/live.php?token=6glncvgm41UWXrmWfTnwBwX7RsP1QmiD"
+                class="link-plain" target="_blank" rel="noopener"><small>Privacy Policy</small></a>
         </div>
     </div>
 </div>
