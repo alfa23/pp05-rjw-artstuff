@@ -42,10 +42,10 @@
             {% endif %}
             <a href="{% url 'profile' %}" class="dropdown-item text-ghost">My Profile</a>
             <a href="{% url 'view_feedback' %}" class="dropdown-item text-ghost">My Feedback</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item text-ghost">Logout</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item text-ghost">Sign Out</a>
         {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item text-ghost">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item text-ghost">Login</a>
+            <a href="{% url 'account_signup' %}" class="dropdown-item text-ghost">Sign Up</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item text-ghost">Sign In</a>
         {% endif %}
     </div>
 </li>

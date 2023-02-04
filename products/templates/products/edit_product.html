@@ -13,16 +13,16 @@
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 mx-auto text-center">
             <hr class="hr-rev">
             <h2 class="logo-font mb-4"><strong>Product Management</strong></h2>
-            <h5 class="text-ghost">Edit a Product</h5>
+            <h5 class="body-font-bold">Edit a Product</h5>
             <hr class="hr-rev">
         </div>
     </div>
 
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 mx-auto">
             <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2"
                 enctype="multipart/form-data">
                 {% csrf_token %}
@@ -33,9 +33,9 @@
                 {{ field }}
                 {% endif %}
                 {% endfor %}
-                <div class="text-right">
-                    <a class="btn btn-outline-ghost rounded-0" href="{% url 'products' %}">Cancel</a>
-                    <button class="btn btn-accent rounded-0" type="submit">Update Product</button>
+                <div class="text-center">
+                    <a class="btn btn-outline-ghost rounded-0 link-plain" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-accent rounded-0 link-plain" type="submit">Update Product</button>
                 </div>
             </form>
         </div>

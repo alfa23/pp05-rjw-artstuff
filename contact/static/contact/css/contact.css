@@ -13,14 +13,9 @@
     color: #f8f8ff;
 }
 
-.hr-rev-md {
-    height: 0.1px;
-    background-color: #f8f8ff;
-    width: 66%;
-}
-
-.hr-rev-sm {
-    height: 0.1px;
-    background-color: #f8f8ff;
-    width: 33%;
+.btn-floating {
+    width: 57px;
+    height: 53px;
+    font-size: 23px !important;
+    text-align: center;
 }

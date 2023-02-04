@@ -25,7 +25,11 @@
                 </a>
                 {% endif %}
             </div>
-            <p class="text-center body-font-bold">Customer Feedback:</p>
+            <p class="text-center body-font-bold">Customer Feedback</p>
+            {% if feedbacks.count == 0 %}
+            <p class="text-center">No customer feedback yet.</p>
+            <hr class="hr-rev-sm">
+            {% else %}
             {% for feedback in feedbacks %}
             <div class="card w-100 border-ghost mb-2 rounded-0">
                 <div class="card-body bg-deep pb-0">
@@ -35,6 +39,7 @@
                 </div>
             </div>
             {% endfor %}
+            {% endif %}
             {% if request.user.is_authenticated %}
             <a href="{% url 'add_feedback' product.id %}" class="btn btn-accent w-100 rounded-0 mt-1 mb-3">
                 <span class="text-uppercase">Leave Product Feedback</span>
