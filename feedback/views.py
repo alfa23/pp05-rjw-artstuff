@@ -10,13 +10,11 @@ from .forms import FeedbackForm
 def view_feedback(request):
     """ View to show user's feedback entries """
     feedbacks = Feedback.objects.filter(author=request.user)
-    # feedback = get_object_or_404(Feedback, pk=feedback_id)
 
     template = 'feedback/view_feedback.html'
 
     context = {
         'feedbacks': feedbacks,
-        # 'feedback': feedback,
     }
 
     return render(request, template, context)
@@ -44,9 +42,6 @@ def add_feedback(request, product_id):
                 form.save()
                 messages.success(request,
                                  'Your product feedback has been submitted')
-
-                # update_product_rating(product)
-
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
                 messages.error(request, 'Failed to submit feedback. \
@@ -84,9 +79,6 @@ def edit_feedback(request, feedback_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated your feedback!')
-
-            # update_product_rating(feedback.product)
-
             return redirect('view_feedback')
         else:
             messages.error(request, 'Failed to update your feedback. \
@@ -119,29 +111,5 @@ def delete_feedback(request, feedback_id):
 
     feedback.delete()
     messages.success(request, 'Your feedback has been deleted!')
-    # print('feedback', feedback)
-    # update_product_rating(feedback.product)
 
     return redirect(reverse('view_feedback'))
-
-
-# def update_product_rating(product):
-#     """ Update the rating field for the product """
-
-#     total_feedbacks = feedback.objects.filter(product=product)
-#     nr_of_total_feedbacks = total_feedbacks.count()
-#     ratings_sum = 0
-
-#     if nr_of_total_feedbacks <= 0:
-#         product.rating = None
-#     else:
-#         for feedback in total_feedbacks:
-#             ratings_sum += feedback.user_rating
-
-#         # calculate raw_rating average & round to 1dp:
-#         raw_rating = ratings_sum / nr_of_total_feedbacks
-#         rounded_rating = round(raw_rating, 1)
-
-#         product.rating = rounded_rating
-
-#     product.save()

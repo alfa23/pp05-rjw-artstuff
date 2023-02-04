@@ -93,7 +93,7 @@
                                 <div class="input-group input-group-{{ product.id }}">
                                     <div class="input-group-prepend">
                                         <button class="decrement-qty btn btn-accent rounded-0 decrement-qty_{{ product.id }}" 
-                                                data-item_id="{{ product.id }}">
+                                                data-item_id="{{ product.id }}" aria-label="Decrement quantity">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
                                             </span>
@@ -103,7 +103,7 @@
                                         name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}">
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-accent rounded-0 increment-qty_{{ product.id }}"
-                                                data-item_id="{{ product.id }}">
+                                                data-item_id="{{ product.id }}" aria-label="Increment quantity">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
                                             </span>
