@@ -383,7 +383,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content a {
-	color: #dc143c; /* text-accent */
+	color: #f8f8ff; /* text-accent */
     font-weight: 700;
 }
 
