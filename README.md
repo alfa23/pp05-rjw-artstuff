@@ -6,20 +6,20 @@
 # **RJW ARTSTUFF**
 
 ## **INTRODUCTION**
-This **fifth and final Portfolio Project** is the product of combined knowledege and techniques from all modules of the ***Code Institute Full Stack Developer Course*** to date, culminating in the creation of this **E-Commerce Applications project**. This Application will ... and also allow the **site owner** to create, read, update and delete additional data records for the **RJW ARTSTUFF** website.
+This **fifth and final Portfolio Project** is the product of combined knowledege and techniques from all modules of the ***Code Institute Full Stack Developer Course*** to date, culminating in the creation of this **E-Commerce Applications project**. This Application will aim to provide **users** with a smooth and stylish e-commerce portal, where they are able to search and purchase original custom artworks and garments from tradigital UK artist RJW. A secondary service proposition is also to be offered, where users - registered or unregistered - have the ability to commission their own custom artworks. The site will also allow the **site owner** to create, read, update and delete product data records for the **RJW ARTSTUFF** website directly through the browser.
 
 A live version of the site can be found [here](https://pp05-rjw-artstuff.herokuapp.com/)
 
-![banner](static/readme/)
+![banner](static/readme/site/pp05_readme_banner.jpg)
 
-![amIresponsive](static/readme/)
+![amIresponsive](static/readme/am_i_responsive/pp05_am_i_responsive.jpg)
 
 ### **PROJECT FUNCTIONALITY**
 The application uses **Django 3** to encourage rapid development, by utilising a *model-template-view* approach.
-In conjunction with **Django**, **sqlite** was used in the Project's inception phase as a database for local testing. **Sqlite** is self-contained highly reliable, SQL database engine that includes all the normal relational database management features. Later, development was switched to **ElephantSQL**, to ensure any data entered was visible in the deployed application. **ElephantSQL** is open source and boosts a fully technical and easy to use object-relational database management system.
+In conjunction with **Django**, **sqlite** was used in the Project's inception phase as a database for local testing. **Sqlite** is self-contained highly reliable, SQL database engine that includes all the normal relational database management features. Later, development was switched to **ElephantSQL**, to ensure any data entered was visible in the deployed application. **ElephantSQL** provides a fully technical and easy to use object-relational database management system.
 The project is version controlled via **Git** & **Github** and is deployed via **Heroku**. All environment & secret variables are stored in an `env.py` file, which is then held in a `.git-ignored` file, ensuring project integrity is held to a high security standard, in relation to project and present day requirements.
 
-Using **Django** and the above Database methods the site owner, as an administrator for the application, has complete access to a custom Admin dashboard where they can Create, Read, Update and Delete records for each of the application models as appropriate. In-built functionality also ensures the ability to maintain, add to, delete and curate the database from directly within the **RJW ARTSTUFF** website, via the ***Product Management*** link. 
+Using **Django** and the above Database methods the **site owner**, as an administrator for the application, has complete access to a custom Admin dashboard where they can ***Create***, ***Read***, ***Update*** and ***Delete*** records for each of the application models as appropriate. In-built functionality also ensures the ability to maintain, add to, delete and curate the database from directly within the **RJW ARTSTUFF** website, via the ***Product Management*** link. Client-facing ***CRUD functionality*** is provided to **registed site users** through the ability to ***create***, ***read***, ***update*** and ***delete*** feedback on any product on the site.
 
 To this end, please ensure when using the site and testing the **CRUD funcionality** of this application, **please log in as site owner, RJW:** 
 
@@ -29,17 +29,15 @@ To this end, please ensure when using the site and testing the **CRUD funcionali
 
 ----
 
-## PLEASE SEE [**CHALLENGES, BUGS and FIXES**](#challenges-bugs-and-fixes) SECTION BEFORE USE
-
-----
-
 # **UCD Phase 1: STRATEGY** 
 
 ## **PROJECT GOALS**
 
 As... full-function e-comm portal.
 
-Base styling and project setup relies mainly on Bootstrap and initially borrows from Code Institute's Boutique Ado project but with my own custom models. Full CRUD functionality is demonstrated in the ability for the site owner to create, update and delete **RJW ARTSTUFF** Product data directly through their browser or the Admin Panel. 
+Base styling and project setup relies mainly on **Django**, **Bootstrap** and borrows from **Code Institute's** *Boutique Ado* project, with the addition of three custom models; ***Feedback***, ***Contact*** and ***Newsletter***. Full *non-superuser CRUD functionality* is demonstrated in the ability for **registered site users** to create, update and delete ***feedback*** on any product, and manage their posted feedbacks through a dedicated ***My Feedback*** page. The **site owner** has full *CRUD functionality* to create, update and delete Product data directly through their browser, without accessing the Admin Panel. 
+
+
 
 ## **USER STORIES:**
 
@@ -47,31 +45,62 @@ A **GitHub** classic kanban project board was utilised throughout to log all ***
 
 ![kanban image](static/readme/)
 
-More **Kanban** screens [**here**](static/readme/).
+All other **Kanban** screens [**here**](static/readme/).
 
-***Unregistered User (Logged Out) Stories* include:**
+***Milestone/Sprint One User Stories***
 - USER STORY #0: Title
   As a new or returning user I can easily register / login so that I can...
 
-***Registered User (Logged In) Stories* include:**
+***Milestone/Sprint One User Stories***
 - USER STORY #0: Title
-  As a returning user I can... so that I can...
+  As a new or returning user I can easily register / login so that I can...
 
-***Site Owner (Superuser) Stories* include:**
+***Milestone/Sprint One User Stories***
 - USER STORY #0: Title
-  As the site owner I can... so that I can...
+  As a new or returning user I can easily register / login so that I can...
 
-***User Stories which fell outside of MVP solution*:**
+***Milestone/Sprint One User Stories***
 - USER STORY #0: Title
-  As a... user I can... so that I can...
+  As a new or returning user I can easily register / login so that I can...
 
-Due to the inevitable development delays due to learning challenges, bug squashing and the like, time and skills unfortunately didn't allow for all ***User Stories*** to be met. However, all *'Must Have'* and *'Should Have'* stories were satisfied and **MVP functionality** was achieved. As site owner I am slightly disappointed that all features weren't included in this iteration but I'm happy overall to have a working proof of concept I can build on.  
+***Milestone/Sprint One User Stories***
+- USER STORY #0: Title
+  As a new or returning user I can easily register / login so that I can...
+
+***Milestone/Sprint One User Stories***
+- USER STORY #0: Title
+  As a new or returning user I can easily register / login so that I can...
+
+***Milestone/Sprint One User Stories***
+- USER STORY #0: Title
+  As a new or returning user I can easily register / login so that I can...
+
+***Milestone/Sprint One User Stories***
+- USER STORY #0: Title
+  As a new or returning user I can easily register / login so that I can...
+
+***Milestone/Sprint One User Stories***
+- USER STORY #0: Title
+  As a new or returning user I can easily register / login so that I can...
+
+***Milestone/Sprint One User Stories***
+- USER STORY #0: Title
+  As a new or returning user I can easily register / login so that I can...
+
 
 ## **GENERIC USER EXPECTATIONS:**
 
 - Intuitive/conventional navigation elements
 - Familiar and/or easily understandable site structure
 - Responsive: access site easily on any device
+- Users are offered the opportunity to register an account
+- Easy shopping process to provide a good customer experience
+
+***User Stories which fell outside of MVP solution*:**
+- USER STORY #0: Title
+  As a... user I can... so that I can...
+
+Due to the inevitable development delays due to learning challenges, bug squashing and the like, time and skills unfortunately didn't allow for all ***User Stories*** to be met. However, all *'Must Have'* and *'Should Have'* stories were satisfied and **MVP functionality** was achieved. As site owner I am slightly disappointed that all features weren't included in this iteration but I'm happy overall to have a working proof of concept I can build on.  
 
 ---- 
 
@@ -179,6 +208,59 @@ Colours utilised were chosen with the **60:40:10 rule** in mind
 
 ----
 
+# **MARKETING**
+
+## **Search Engine Optimisation**
+
+Search Engine Optimisation
+
+To improve the search index rating on Google, research was carried out using a number of tools, such as [Wordtracker](https://www.wordtracker.com/) to search for relevant keywords to use in meta tags in the project head element.
+
+Search terms such as ... and ... were used to return popular keywords. A number of short and long tail keywords were then selected and inputted into the head element of base.html.
+
+The selected keywords include:
+
+- Tradigital art
+- 
+
+These keywords remain a work in progress however. As is normal practise, in production these keywords would be monitored via, for example, Google Analytics, to determine which terms are driving traffic to the site. 
+
+These terms could then be added to, or removed as deemed necessary, and with continual improvement and refinement of these over time should utlimately assist in the site ranking higher on Google.
+
+Several extremely niche and low-scoring keywords were also purposefully included, with the aim of hopefully increasing the popularity of some keywords and phrases!
+
+
+## **Business Model**
+
+
+## Company description
+
+RJW ARTWEAR
+
+
+## Users
+
+Our costumers are millennials and younger, singles and families who have an environmental interest and a will to reduce their plastic consumption.
+
+## Competitors
+
+We see that we have three types of competitors. 
+There are companies that have the same interest and vision 
+The other type of competitors 
+There are some companies that offer 
+
+
+## **Marketing Strategy**
+
+Due to a small initial marketing budget, RJW ARTSTUFF 
+
+
+**Facebook Business page**
+
+Facebook Business page mock
+![](static/readme/)
+
+
 # **TECHNOLOGIES**
 
 During the course of this project I have utilised the following technologies:
@@ -202,7 +284,7 @@ and integrate systems more effectively.'
 - **Heroku** (https://www.heroku.com/) A cloud platform as a service enabling deployment of this **CRUD application**.
 
 ## **TOOLS USED**
-- **PostgreSQL** A free, open-source relational database management system emphasizing extensibility and technical standards compliance.
+- **ElephantSQL** A free, open-source relational database management system emphasizing extensibility and technical standards compliance: "The most advanced open-source database, hosted in the cloud." 
 - **Balsamiq** (https://balsamiq.com) used to generate mobile and desktop wireframes.
 - **favicon** (https://www.favicon.cc/) was used to create a **custom favicon** for the project: ![favicon](static/favicon.ico)
 - **roundSlider** (https://roundsliderui.com/) is a **jQuery plugin** that allows the user to select a value. Used to input and update *User Ratings* on the site. 
