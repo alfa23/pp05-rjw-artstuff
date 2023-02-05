@@ -1,4 +1,54 @@
+- [**RJW ARTSTUFF**](#--rjw-artstuff--)
+  * [**INTRODUCTION**](#--introduction--)
+    + [**PROJECT FUNCTIONALITY**](#--project-functionality--)
+- [**UCD Phase 1: STRATEGY**](#--ucd-phase-1--strategy--)
+  * [**PROJECT GOALS**](#--project-goals--)
+  * [**USER STORIES:**](#--user-stories---)
+  * [**GENERIC USER EXPECTATIONS:**](#--generic-user-expectations---)
+- [**UCD Phase 2: SCOPE**](#--ucd-phase-2--scope--)
+  * [**Analysis of *User Stories:***](#--analysis-of--user-stories----)
+- [**UCD Phase 3: STRUCTURE**](#--ucd-phase-3--structure--)
+  * [**SITE MAP**](#--site-map--)
+  * [**ENTITY RELATIONSHIP DIAGRAM**](#--entity-relationship-diagram--)
+- [**UCD Phase 4: SKELETON**](#--ucd-phase-4--skeleton--)
+  * [**INITIAL WIREFRAMES**](#--initial-wireframes--)
+- [**UCD Phase 5: SURFACE**](#--ucd-phase-5--surface--)
+  * [**DESIGN CHOICES**](#--design-choices--)
+  * [Fonts](#fonts)
+  * [Colours](#colours)
+  * [Imagery](#imagery)
+- [**MARKETING**](#--marketing--)
+  * [**Search Engine Optimisation**](#--search-engine-optimisation--)
+  * [**E-Commerce Business Model**](#--e-commerce-business-model--)
+- [**FEATURES**](#--features--)
+  * [**CURRENT FEATURES**](#--current-features--)
+  * [***FEATURES TO IMPLEMENT***](#---features-to-implement---)
+- [**TECHNOLOGIES**](#--technologies--)
+  * [**LANGUAGES, VERSION CONTROL and FRAMEWORKS**](#--languages--version-control-and-frameworks--)
+    + [HTML, CSS, JS & Python - core languages used to create this CRUD application:](#html--css--js---python---core-languages-used-to-create-this-crud-application-)
+    + [DATABASE MANAGEMENT](#database-management)
+    + [VERSION CONTROL, FRAMEWORKS & LIBRARIES:](#version-control--frameworks---libraries-)
+    + [PACKAGES & DEPENDENCIES:](#packages---dependencies-)
+    + [PAYMENT SERVICE:](#payment-service-)
+    + [CLOUD STORAGE:](#cloud-storage-)
+    + [OTHER TOOLS AND PROGRAMS:](#other-tools-and-programs-)
+- [**TESTING**](#--testing--)
+  * [CODE VALIDATION](#code-validation)
+  * [W3C Validator Testing](#w3c-validator-testing)
+  * [jshint Validator Testing](#jshint-validator-testing)
+  * [PEP8 Validator Testing](#pep8-validator-testing)
+  * [**MANUAL TESTING**](#--manual-testing--)
+  * [Manual Testing Results Summary](#manual-testing-results-summary)
+- [**DEVELOPMENT CYCLE**](#--development-cycle--)
+  * [**PROJECT CHECKLIST**](#--project-checklist--)
+  * [**AWS Bucket Creation**](#--aws-bucket-creation--)
+  * [**Connect Django to AWS Bucket**](#--connect-django-to-aws-bucket--)
+  * [**CHALLENGES, BUGS and FIXES**](#--challenges--bugs-and-fixes--)
+    + [**Bug: 500-Errors on deployed project](#--bug--500-errors-on-deployed-project)
+  * [**CREDITS**](#--credits--)
+
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 =====
 
@@ -293,7 +343,7 @@ Colours utilised were chosen with the **60:40:10 rule** in mind
 
 - 40% Body Text/Secondary: **#f8f8ff** *Ghost White* chosen as a fresh, slightly-cool-white contrast to primary
 
-- 10% Accent/Tertiary: **#d** *Crimson* was chosen as a strong contrasting accent colour to both primary and secondary
+- 10% Accent/Tertiary: **#dc143c** *Crimson* was chosen as a strong contrasting accent colour to both primary and secondary
   
   - Initially utilised as border and text secondary, text has been returned to Ghost White for client-facing copy and crimson is now primarily used for input borders and buttons. This decision was taken after testing colour contrast:
 
@@ -839,6 +889,7 @@ In addition to my own testing a link to the project was shared to family & frien
     - Import **dj_database_url** beneath `import os` at the top of `settings.py`
     - Edit `settings.py` `DATABASES` section to connect to ElephantSQL instead of local `sqlite3`:
 
+    ```
         # DATABASES = {
         #     'default': {
         #         'ENGINE': 'django.db.backends.sqlite3',
@@ -849,7 +900,8 @@ In addition to my own testing a link to the project was shared to family & frien
         DATABASES = {
             'default': dj_database_url.parse('your-database-url-here')
         }
-    
+    ```
+
       **WARNING:** Don't committhis file! It will be removed shortly...
 
     - Run migrations in the terminal using `python3 manage.py showmigrations`
@@ -1066,19 +1118,14 @@ Create a custom_storages.py file in your project's root directory, and inside it
 
 **SOLVED BUGS**
 
-### **Bug: %00 Errors on my deployed project
+### **Bug: 500-Errors on deployed project
   
-  • *Issue:* After local development pushes, my deployed **Heroku** started throwing 500 errors
+  • *Issue:* After local development pushes, my deployed **Heroku** app started throwing 500 errors
   
   • *Fix:* I had created several new apps in my local environment and these changes were not reflected in the **ElephantSQL** databases. A chat with **Code Institute** *Tutor Support* and a migration using Heroku in the terminal thankfully solved the issue. *Phew, thank you, Ed!*
 
   ![DB bug](static/readme/bug/pp05_bug_1-1.jpg)
   [Further bug files for this issue](static/readme/bug/)
-
-----
-### **CONTRIBUTERS**
-
-Other coders code that I've referenced, learnt from, been inspired by or just plain borrowed:
 
 ----
 
