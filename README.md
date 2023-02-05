@@ -1,27 +1,29 @@
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-
 =====
 
 # **RJW ARTSTUFF**
 
-## **INTRODUCTION**
-This **fifth and final Portfolio Project** is the product of combined knowledege and techniques from all modules of the ***Code Institute Full Stack Developer Course*** to date, culminating in the creation of this **E-Commerce Applications project**. This Application will aim to provide **users** with a smooth and stylish e-commerce portal, where they are able to search and purchase original custom artworks and garments from tradigital UK artist RJW. A secondary service proposition is also to be offered, where users - registered or unregistered - have the ability to commission their own custom artworks. The site will also allow the **site owner** to create, read, update and delete product data records for the **RJW ARTSTUFF** website directly through the browser.
-
-A live version of the site can be found [here](https://pp05-rjw-artstuff.herokuapp.com/)
-
 ![banner](static/readme/site/pp05_readme_banner.jpg)
+
+## **INTRODUCTION**
+This **fifth and final Portfolio Project** is the product of combined knowledege and techniques from all modules of the ***Code Institute Full Stack Developer Course*** to date, culminating in the creation of this **E-Commerce Applications project**. 
+
+**RJW ARTSTUFF** allows users to shop original artwork and illustration products from **UK tradigital artist**, ***RJW***. The e-commerce portal offers a range of *quality printed original artworks and garments* at affordable prices, in addition to *artist commissions and custom original art* at competitive rates.
 
 ![amIresponsive](static/readme/am_i_responsive/pp05_am_i_responsive.jpg)
 
+A live version of the site can be found [here](https://pp05-rjw-artstuff.herokuapp.com/)
+
 ### **PROJECT FUNCTIONALITY**
 The application uses **Django 3** to encourage rapid development, by utilising a *model-template-view* approach.
-In conjunction with **Django**, **sqlite** was used in the Project's inception phase as a database for local testing. **Sqlite** is self-contained highly reliable, SQL database engine that includes all the normal relational database management features. Later, development was switched to **ElephantSQL**, to ensure any data entered was visible in the deployed application. **ElephantSQL** provides a fully technical and easy to use object-relational database management system.
+In conjunction with **Django**, **sqlite** was used in the Project's inception phase as a database for local testing. **Sqlite** is self-contained highly reliable, SQL database engine that includes all the normal relational database management features. Later, development was switched to **ElephantSQL**, to ensure any data entered was visible in the deployed application. **ElephantSQL** provides an open-source, fully technical and easy-to-use object-relational database management system.
+
 The project is version controlled via **Git** & **Github** and is deployed via **Heroku**. All environment & secret variables are stored in an `env.py` file, which is then held in a `.git-ignored` file, ensuring project integrity is held to a high security standard, in relation to project and present day requirements.
 
-Using **Django** and the above Database methods the **site owner**, as an administrator for the application, has complete access to a custom Admin dashboard where they can ***Create***, ***Read***, ***Update*** and ***Delete*** records for each of the application models as appropriate. In-built functionality also ensures the ability to maintain, add to, delete and curate the database from directly within the **RJW ARTSTUFF** website, via the ***Product Management*** link. Client-facing ***CRUD functionality*** is provided to **registed site users** through the ability to ***create***, ***read***, ***update*** and ***delete*** feedback on any product on the site.
+Using **Django** and the above Database methods the **site owner**, as an administrator for the application, has complete access to a custom Admin dashboard where they can ***Create***, ***Read***, ***Update*** and ***Delete*** records for each of the application models as appropriate. In-built functionality also ensures the ability to maintain, add to, delete and curate the database from directly within the **RJW ARTSTUFF** website, via the ***Product Management*** link. Client-facing ***CRUD functionality*** is provided to **registed site users** through the ability to ***create***, ***read***, ***update*** and ***delete*** feedback on any product on the site. Finally, a **Connect** page provides users with the opportunity to initiate their own *custom art project* by completeing a ***contact form***, in addition to a ***newsletter subscription*** link, where they can choose to subscribe to the **RJW ARTSTUFF** newsletter. 
 
-To this end, please ensure when using the site and testing the **CRUD funcionality** of this application, **please log in as site owner, RJW:** 
+To this end, please ensure when using the site to test the full **CRUD funcionality** of this application, **please log in as site owner, RJW:** 
 
 | IS STAFF? | USER | EMAIL | PASSWORD | IS SUPERUSER? |
 |-----|-----|-----|-----|-----|
@@ -33,111 +35,210 @@ To this end, please ensure when using the site and testing the **CRUD funcionali
 
 ## **PROJECT GOALS**
 
-As... full-function e-comm portal.
+This project will aim to provide **users** with a *smooth and stylish e-commerce portal*, where they are able to search and purchase ***original custom artworks*** and ***garments*** by **tradigital UK artist *RJW***. A secondary service proposition is also to be offered, where **users** - registered or unregistered - have the ability to *commission their own custom artworks*. The site will also allow the **site owner** to *create, read, update and delete product data records* for the **RJW ARTSTUFF** website directly through the browser.
 
-Base styling and project setup relies mainly on **Django**, **Bootstrap** and borrows from **Code Institute's** *Boutique Ado* project, with the addition of three custom models; ***Feedback***, ***Contact*** and ***Newsletter***. Full *non-superuser CRUD functionality* is demonstrated in the ability for **registered site users** to create, update and delete ***feedback*** on any product, and manage their posted feedbacks through a dedicated ***My Feedback*** page. The **site owner** has full *CRUD functionality* to create, update and delete Product data directly through their browser, without accessing the Admin Panel. 
-
-
+Base styling and project setup relies mainly on **Django**, **Bootstrap** and borrows from **Code Institute's** *Boutique Ado* project, with the addition of three custom models; ***Feedback***, ***Contact*** and ***Newsletter***. Full *non-superuser CRUD functionality* is demonstrated in the ability for **registered site users** to create, update and delete ***feedback*** on any product, and *manage their posted feedbacks* through a dedicated ***My Feedback*** page. The **site owner** has full *CRUD functionality* to create, update and delete Product data directly through their browser, without a need to access the Admin Panel. 
 
 ## **USER STORIES:**
 
-A **GitHub** classic kanban project board was utilised throughout to log all ***User Stories***, track their progress and manage the project. This helped keep focus by moving them, in manageable batches, through *lanes*; from *"to do"* through *"in progress"* into ***"done"***, as they were completed.
+A **GitHub** classic kanban project board was utilised throughout to log all ***User Stories*** necessary to meet MVP requirements, track their progress and manage the project. This helped keep focus by moving them, in manageable batches, through *lanes*; from *"to do"* through *"in progress"* into ***"done"***, as they were completed.
 
-![kanban image](static/readme/)
+![kanban image](static/readme/kanban/pp05_sprint_kanban_s02.jpg)
 
-All other **Kanban** screens [**here**](static/readme/).
+![user stories image](static/readme/kanban/pp05_user_stories_s1-s2.jpg)
 
-***Milestone/Sprint One User Stories***
-- USER STORY #0: Title
-  As a new or returning user I can easily register / login so that I can...
+![stage complete image](static/readme/kanban/pp05_sprint_functionality_s02.jpg)
 
-***Milestone/Sprint One User Stories***
-- USER STORY #0: Title
-  As a new or returning user I can easily register / login so that I can...
+All other **Kanban** screens [**here**](static/readme/kanban/).
 
 ***Milestone/Sprint One User Stories***
-- USER STORY #0: Title
-  As a new or returning user I can easily register / login so that I can...
 
-***Milestone/Sprint One User Stories***
-- USER STORY #0: Title
-  As a new or returning user I can easily register / login so that I can...
+- USER STORY #05: Account Registration
+As an unregistered user I can easily register for an account so that I can shop more conveniently on future visits.
 
-***Milestone/Sprint One User Stories***
-- USER STORY #0: Title
-  As a new or returning user I can easily register / login so that I can...
+- USER STORY #04: View Purchase Total
+  As an unregistered user I can easily view my purchase total at any time so that I can see my current total & avoid overspending.
 
-***Milestone/Sprint One User Stories***
-- USER STORY #0: Title
-  As a new or returning user I can easily register / login so that I can...
+- USER STORY #06: Account Login / Logout
+  As a registered user I can login or logout easily so that I can securely access my personal account info.
 
-***Milestone/Sprint One User Stories***
-- USER STORY #0: Title
-  As a new or returning user I can easily register / login so that I can...
+- USER STORY #07: Account Password Recovery
+  As a registered user I can recover my password if I forget it so that I can easily regain access to my account.
 
-***Milestone/Sprint One User Stories***
-- USER STORY #0: Title
-  As a new or returning user I can easily register / login so that I can...
+***Milestone/Sprint Two User Stories***
 
-***Milestone/Sprint One User Stories***
-- USER STORY #0: Title
-  As a new or returning user I can easily register / login so that I can...
+- USER STORY #01: View List of Items
+  As an unregistered user I can view a list of items available to purchase so that I can select items to purchase.
 
-***Milestone/Sprint One User Stories***
-- USER STORY #0: Title
-  As a new or returning user I can easily register / login so that I can...
+- USER STORY #02: View Item Details
+  As an unregistered user I can view specific item details so that I can see the price, description, image, rating & available options of certain items I'm interested in.
 
+- USER STORY #03: View Deal and Offer Items
+  As an unregistered user I can easily identify new items, current deals & special offers so that I can shop the latest items or benefit from special savings on items.
+
+***Milestone/Sprint Three User Stories***
+
+- USER STORY #13: Search for Specific Items
+  As a registered or unregistered user I can search items by name or description so that I can find specific items to purchase.
+
+- USER STORY #14: View Searches & Results
+  As a registered or unregistered user I can easily view searched items & the results so that I can easily check if items are available.
+
+***Milestone/Sprint Four User Stories***
+
+- USER STORY #10: Sort List of Available Items
+  As a registered or unregistered user I can sort a list of the available items so that I can view categorically-sorted list to easily identify best-rated or best-priced items.
+
+- USER STORY #11: Sort Items By Specific Category
+  As a registered or unregistered user I can sort items by specific category so that I can view category-specific best-rated or best-priced items.
+
+- USER STORY #12: Sort Multiple Categories Simultaneously
+  As a registered or unregistered user I can sort multiple categories simultaneously so that I can find best-rated or best-priced items across broad categories of items, e.g. 'artwork' or 'artwear'.
+
+***Milestone/Sprint Five User Stories***
+
+- USER STORY #15: Checkout - Item Options & Quantity
+  As a registered or unregistered user I can easily select options & quantity of items when buying so that I can ensure the correct product/quantity/options are selected.
+
+- USER STORY #16: Checkout - View Bag Items
+  As a registered or unregistered user I can view items in bag to be purchased so that I can see the total cost of purchases & all items to be received.
+
+- USER STORY #17: Checkout - Adjust Bag Quantities
+  As a registered or unregistered user I can easily adjust quantities of items in bag so that I can easily make changes to basket items before checkout.
+
+***Milestone/Sprint Six User Stories***
+
+- USER STORY #18: Easy Purchase Process
+  As a registered or unregistered user I can easily complete the purchase process so that I can checkout quickly and hassle-free.
+
+- USER STORY #19: Checkout - View Order Confirmation
+  As a registered user I can view an order confirmation after checkout so that I can check there are no mistakes.
+
+- USER STORY #20: Checkout - Receive Email Confirmation
+  As a role I can receive email confirmation after checkout so that I can keep a confirmation of order details for my own records.
+
+***Milestone/Sprint Seven User Stories***
+
+- USER STORY #08: Account Registration Verification Email
+  
+As a registered user I can receive an email confirming account registration so that I can verify account registration was successful.
+
+- USER STORY #09: Account User Profiles
+  As a registered user I can access a personalised user profile so that I can save personal & payment info, view personal order history/order confirmations.
+
+***Milestone/Sprint Eight User Stories***
+
+- USER STORY #21: Admin - Add New Items
+  As the site owner I can create/add new items so that I can add new products to the site.
+
+- USER STORY #22: Admin - Update Items
+  As the site owner I can update/edit existing items so that I can easily change an item's price, description, image & other criteria.
+
+- USER STORY #23: Admin - Delete Items
+  As the site owner I can delete items so that I can easily remove items no longer for sale.
+
+***Milestone/Sprint Nine User Stories***
+
+- USER STORY #24: Feedback - Create Comment / Review
+  As a registered user I can create a comment/review on items I purchase so that I can leave feedback for other users on purchased items.
+
+- USER STORY #25: Feedback - Update Comment / Review
+  As a registered user I can update/edit comments/reviews I have previously created so that I can easily amend comments/reviews for purchased items.
+
+- USER STORY #26: Feedback - Delete Comment / Review
+  As a registered user I can delete comments/reviews I have previously created so that I can easily remove comments/reviews for purchased items.
+
+- USER STORY #27: Feedback - Manage All Comments / Reviews
+  As a registered user I can easily view a summary of my comments/reviews so that I can easily view & manage comments/reviews for purchased items.
+
+***Milestone/Sprint Ten User Stories***
+
+- USER STORY #28: Contact - Submit Contact Form
+  As a registered or unregistered user I can submit a contact form so that I can easily get in touch with the site owner for enquiries and information.
+
+- USER STORY #29: Contact - Message Received Confirmation
+  As a registered or unregistered user I can receive a 'thank you for your message!' confirmation email so that I can be confident my enquiry has been received.
+
+- USER STORY #30: Contact - Newsletter Sign Up
+  As a registered or unregistered user I can sign up for the RJW Illustration newsletter so that I can keep updated & informed with RJWs creative & commercial activity.
 
 ## **GENERIC USER EXPECTATIONS:**
 
 - Intuitive/conventional navigation elements
+
 - Familiar and/or easily understandable site structure
+
 - Responsive: access site easily on any device
+
 - Users are offered the opportunity to register an account
+
 - Easy shopping process to provide a good customer experience
-
-***User Stories which fell outside of MVP solution*:**
-- USER STORY #0: Title
-  As a... user I can... so that I can...
-
-Due to the inevitable development delays due to learning challenges, bug squashing and the like, time and skills unfortunately didn't allow for all ***User Stories*** to be met. However, all *'Must Have'* and *'Should Have'* stories were satisfied and **MVP functionality** was achieved. As site owner I am slightly disappointed that all features weren't included in this iteration but I'm happy overall to have a working proof of concept I can build on.  
 
 ---- 
 
 # **UCD Phase 2: SCOPE**
 
-### Analysis and ***MoSCoW grading*** of ***User Stories:***
+## **Analysis of *User Stories:***
 
-| USER STORY                                 | MoSCoW | 
-|--------------------------------------------|:------:|
-| USER STORY #01: Title             |  M     |
-| USER STORY #02: Title             |  M     |
-| USER STORY #03: Title             |  M     |
-| USER STORY #04: Title             |  M     |
-| USER STORY #05: Title             |  S     |
-| USER STORY #06: Title             |  M     |
-| USER STORY #07: Title             |  S     |
-| USER STORY #08: Title             |  S     |
-| USER STORY #09: Title             |  S     |
-| USER STORY #10: Title             |  C / W |
-| USER STORY #11: Title             |  C / W |
-| USER STORY #12: Title             |  C / W |
+| OPPORTUNITY/PROBLEM  | IMPORTANCE | VIABILITY/FEASIBILITY |
+|------|:------:|:------:|
+| US #01 View List of Items |  5  |  5  |
+| US #02 View Item Details |  5  |  5  |
+| US #03 View Deal and Offer Items |  5  |  5  |
+| US #04 View Purchase Total |  5  |  5  |
+| US #05 Account Registration |  5  |  5  |
+| US #06 Account Login / Logout |  5  |  5  |
+| US #07 Account Password Recovery |  5  |  5  |
+| US #08 Account Registration Verification Email |  5  |  5  |
+| US #09 Account User Profiles |  5  |  5  |
+| US #10 Sort List of Available Items |  5  |  5  |
+| US #11: Sort Items By Specific Category |  5  |  5  |
+| US #12: Sort Multiple Categories Simultaneously |  5  |  5  |
+| US #13: Search for Specific Items |  5  |  5  |
+| US #14: View Searches & Results |  5  |  5  |
+| US #15: Checkout - Item Options & Quantity |  5  |  5  |
+| US #16: Checkout - View Bag Items |  5  |  5  |
+| US #17: Checkout - Adjust Bag Quantities |  5  |  4  |
+| US #18: Easy Purchase Process |  5  |  5  |
+| US #19: Checkout - View Order Confirmation |  5  |  5  |
+| US #20: Checkout - Receive Email Confirmation |  5  |  5  |
+| US #21: Admin - Add New Items |  5  |  5  |
+| US #22: Admin - Update Items |  5  |  5  |
+| US #23: Admin - Delete Items |  5  |  5  |
+| US #24: Feedback - Create Comment / Review |  5  |  5  |
+| US #25: Feedback - Update Comment / Review |  5  |  4  |
+| US #26: Feedback - Delete Comment / Review |  5  |  4  |
+| US #27: Feedback - Manage All Comments / Reviews |  5  |  4  |
+| US #28: Contact - Submit Contact Form |  5  |  4  |
+| US #29: Contact - Message Received Confirmation |  5  |  5  |
+| US #30: Contact - Newsletter Sign Up |  5  |  4  |
+| TOTAL: |: 150 :| 144 |
 
-***Proposed Production:*** Delivery of **MVP as a fully functioning solution**, with the potential exception of:
-- USER STORY #00: Title
-  As a... user I can... so that I can...
-
-As stated previously, due to general project coding challenges and bugtime, it was fairly apparent midway through development that implementation of all user stories was unlikely. It was at this point, after brief investigations into integrating the user stories above, that I decided to focus on the work in progress and on **completing the sprints required to achieve a base MVP**. 
+***Proposed Production:*** The project will include all the features, as identified above, in order to build the *minimum viable product* (**MVP**). Completing the work in manageable ***sprints***, organised with the help of **GitHub's** baked-in *issues* and *milestones project features*, to produce the *robust viable solution* required.  
 
 ----
 
 # **UCD Phase 3: STRUCTURE**
 
+## **SITE MAP**
+
+**RJW ARTSTUFF** is organised in a Hierarchical Tree Structure to assist the site user in navigating through the site effortlessly and intuitively.
+
+![ARTSTUFF sitemap](static/readme/pp05_wf_desktop/pp05_wf_desk_site_map.jpg)
+
+- Header and navigation consistent site-wide
+
+- Links and forms provide clear feedback to users
+
+- Additional features available to users after they register and sign in
+
+- A 404-error page is available.
+
 ## **ENTITY RELATIONSHIP DIAGRAM** 
 
-An ***Entitiy Relationship diagram*** was produced in order to better visualise the data to be stored in the database. It demonstrates the basic design upon which the database will be built. It specifies what data entities and attributes will be stored and how they relate to eachother.
+An ***Entitiy Relationship diagram*** was created with [drawsql](https://drawsql.app/) in order to better visualise the data to be stored in the database. It demonstrates the basic design upon which the database will be built. It specifies what data entities and attributes will be stored and how they relate to eachother. The type of database being used is relational, being managed using SQLite3 during development and deployed using [ElephantSQL](https://elephantsql.com/).
 
-![ERD](static/readme/)
+![ERD](static/readme/ERD/pp05_erd.jpg)
 
 ---- 
 
@@ -149,13 +250,14 @@ Following current conventional practice, **RJW ARTSTUFF** was designed with a Mo
 
 ----
 
-![Example mobile wireframe](static/readme/)
+![Example mobile wireframe](static/readme/pp05_wf_mobile/pp05_wf_mob_sign_up.jpg) ![Example mobile wireframe](static/readme/pp05_wf_mobile/pp05_wf_mob_sign_in.jpg) ![Example mobile wireframe](static/readme/pp05_wf_mobile/pp05_wf_mob_sign_out.jpg)
 
 ----
 
-![Example desktop wireframe](static/readme/)
+![Example desktop wireframe](static/readme/pp05_wf_desktop/pp05_wf_desk_connect.jpg)
 
-All wireframes generated in **[Balsamiq](https://balsamiq.com)**. A full set of PDF & PNG wireframes for mobile and desktop can be found [**here**](static/wireframes/).
+All wireframes generated in **[Balsamiq](https://balsamiq.com)**. A full set of wireframes can be found [**here for mobile**](static/readme/pp05_wf_mobile/) and [**here for desktop**](static/readme/pp05_wf_desktop/).
+
 
 ---- 
 
@@ -167,44 +269,41 @@ All wireframes generated in **[Balsamiq](https://balsamiq.com)**. A full set of 
 
 All fonts utilised in this project were sourced from and served by [**Google Fonts**](https://fonts.google.com):
 
-- **Heading Font:** *NAME*
+- **Heading Font:** *Amatic SC*
   
-  *NAME* is a sans-serif typeface intended for display purposes, which stood out as an ideal choice for this project's header/logo when initially browsing Google Fonts. 
+  *Amatic SC* is a sans-serif typeface intended for display purposes, which stood out as an ideal choice for this project's header/logo when initially browsing Google Fonts for my very first Portfolio Project, [**RJW Illustration**](https://alfa23.github.io/portfolio-project-one/index.html). It works well with his brand and was an obvious choice for this project. 
 
-- **Body Font:** *NAME*
+- **Body Font:** *Ubuntu*
 
-  *NAME* was chosen as a light, easy going body typeface; it's rounded bars and quirky typographic additions subtly contrast the weight and formality of **NAME**.
+  *Ubuntu* was chosen for it's quirky typography and clean lines
 
-![Google Fonts Choices](static/readme/)
+![Google Fonts Choices](static/readme/colour_fonts/pp05_google_fonts.jpg)
+
+- Several fonts were under consideration for the body font and [**Pair and Compare**](https://www.pairandcompare.net) was found to be an invaluable tool for helping with the final choice
+
+![PairAndCompare](static/readme/colour_fonts/pp05_google_fonts_compare.jpg)
 
 ## Colours
 
 Colours utilised were chosen with the **60:40:10 rule** in mind 
 
-  • 60% Background/Primary - **#000000** *Guyabano* was chosen as a light, clean and calm alternative to white. Taken from *Original Xbox Green* list of Distantly Related Related colours.
-  
-  • 40% Body Text/Secondary: **#000000** *Original Xbox Green* chosen as it's a strong, brand-specific colour, which is familiar to Xbox users. Colour hex value referenced from: https://encycolorpedia.com/0e7a0d.
-  
-  • 10% Accent/Tertiary: **#000000** *Carmine* was chosen as a good contrasting accent colour to both Primary and Secondary colours. Taken from Original Xbox list of Intermediately Related colours, it is mainly utilised for link & button hover.
+- 60% Background/Primary - **#000032** was chosen as as-dark-a-blue-to-black as possible! Wanted to avoid a completely flat black or grey site, aiming for something deep-space-ish
 
-![Image](static/readme/)
+- 40% Body Text/Secondary: **#f8f8ff** *Ghost White* chosen as a fresh, slightly-cool-white contrast to primary
+
+- 10% Accent/Tertiary: **#d** *Crimson* was chosen as a strong contrasting accent colour to both primary and secondary
+  
+  - Initially utilised as border and text secondary, text has been returned to Ghost White for client-facing copy and crimson is now primarily used for input borders and buttons. This decision was taken after testing colour contrast:
+
+![Colours 1](static/readme/colour_fonts/pp05_color_contrast_ghost.jpg)
+
+![Colours 2](static/readme/colour_fonts/pp05_color_contrast_accent.jpg)
 
 ## Imagery
 
-• Main page banner image:
+All artwork used in this site is ***original RJW tradigital artwork***. Product mocks were generated using original ***RJW artworks*** and *royalty-free product mockup files*, sources as detailed under ***Resources Used***.
 
-  - The image utilised for the site header is
-  
-    - Sourced from: https://
-
-• Other images utilised sourced from: 
-  
-  - Details: https://
-
-  - Details: https://
-
-
-• All copy used for game descriptions have their relevant sources credited in-body where appropriate. 
+All icons provided and hosted by [**FontAwesome**](https://www.fontawesome.com/).
 
 ----
 
@@ -212,54 +311,174 @@ Colours utilised were chosen with the **60:40:10 rule** in mind
 
 ## **Search Engine Optimisation**
 
-Search Engine Optimisation
+***Keywords***
 
-To improve the search index rating on Google, research was carried out using a number of tools, such as [Wordtracker](https://www.wordtracker.com/) to search for relevant keywords to use in meta tags in the project head element.
+To improve **Google** search ratings, [**keyword research**](static/readme/seo_web_marketing_kwords/pp05_seo_keywords.pdf) was carried out using a number of tools, for example [**rankingCoach**](https://www.rankingcoach.com/), to search for relevant *short-* and *long-tail keywords* for use as **RJW ARTSTUFF** *meta tag content* in the project `head` element.
 
-Search terms such as ... and ... were used to return popular keywords. A number of short and long tail keywords were then selected and inputted into the head element of base.html.
-
-The selected keywords include:
+Search terms *original art prints*, *custom art garments* and *illustrator for hire* were initially used to return popular keywords. After further searching and refining, a number of *short-* and *long-tail keywords* were chosen for use in the *head element* of ***base.html***. Initial selected keywords include but aren't limited to:
 
 - Tradigital art
-- 
 
-These keywords remain a work in progress however. As is normal practise, in production these keywords would be monitored via, for example, Google Analytics, to determine which terms are driving traffic to the site. 
+- Printed t-shirt 
 
-These terms could then be added to, or removed as deemed necessary, and with continual improvement and refinement of these over time should utlimately assist in the site ranking higher on Google.
+- Graphic hoodies 
 
-Several extremely niche and low-scoring keywords were also purposefully included, with the aim of hopefully increasing the popularity of some keywords and phrases!
+- Commission illustration
 
+- Cool custom canvas art
 
-## **Business Model**
+- Original artist prints 
 
+These keywords will, however, remain a work in progress. As is normal practice, in production these keywords will be monitored (via, for example, **Google Analytics**) to determine which terms are driving traffic to the site. These terms will then be updated and tweaked, with a view to continual improvement and refinement over time. This should utlimately assist in the site ranking higher on **Google**.
 
-## Company description
+As the chosen market is saturated with several large players and a plethora of small independent offerings, it was decided with the store owner to lean towards more niche and specific keywording. To this end, several extremely niche and low-scoring keywords have also been purposefully included, with the aim of hopefully seeing an increase in the popularity of some of these keywords and phrases!
 
-RJW ARTWEAR
+![rankingCoach](static/readme/seo_web_marketing_kwords/pp05_seo_keywords-01.jpg)
 
+## **E-Commerce Business Model**
 
-## Users
+***Company Mission & Audience***
 
-Our costumers are millennials and younger, singles and families who have an environmental interest and a will to reduce their plastic consumption.
+*Who are **RJW ARTSTUFF** users?*
 
-## Competitors
+  **Product:** Comprising items from initial ***ARTWORK*** (limited edition prints & canvas art) and ***ARTWEAR*** (custom art printed garments - tees, hoodies & caps) categories. Potential **RJW ARTSTUFF** ***B2C users*** could be anyone - male, female, young or old - looking for *quality, original art products* as a gift or to own. 
 
-We see that we have three types of competitors. 
-There are companies that have the same interest and vision 
-The other type of competitors 
-There are some companies that offer 
+  - Primarily **Business to Consumer**, focusing on supplying cool art to the general public
 
+  - Prints & canvas have wide-range appeal across all age groups
 
-## **Marketing Strategy**
+  - Hoodies, tees and caps likely to appeal more to younger and millenial audiences
 
-Due to a small initial marketing budget, RJW ARTSTUFF 
+  - Commercial **B2B** projects *not* being ruled out, although *not currently actively targeting* this market
 
+  **Service:** *Hire, commission a custom artwork by*, or *discuss a collaboration with* ***RJW;*** easily initiate a *custom project enquiry* by completing an online form on the site's ***Contact*** page 
 
-**Facebook Business page**
+  - Primarily **B2C**: Focusing on small *custom projects (portraits, original illustrations)* for interested individuals
 
-Facebook Business page mock
-![](static/readme/)
+  - Again, commercial **B2B** projects not being ruled out, although not currently actively targeting this market
 
+*Which online platfoms would we find many **RJW ARTSTUFF** users?*
+
+  The online market for *custom artwork products* and *artist/illustrator services* is vast and competitive: 
+
+  - **Product:** Sites such as [**Etsy**](https://www.etsy.com/uk), [**Everpress**](https://www.everpress.com), [**Threadless**](https://www.threadless.com), [**Amazon**](https://www.amazon.co.uk), [**eBay**](https://www.ebay.co.uk) 
+
+  - **Service:** Sites such as [**Fiverr**](https://www.fiverr.com), [**Upwork**](https://www.upwork.com), [**Creativepool**](https://www.creativepool.com)
+
+  **RJW ARTSTUFF** will create/maintain profiles at the above sites and others - *if you can’t beat ‘em, join ‘em!* 
+
+***Core Business Intents***
+
+*What are the **RJW ARTSTUFF** business goals?*
+
+  To organically develop an *online business community* that support, share and hopefully invest in ***RJW’s*** artistic endeavours, ultimately to be capable of sustaining his career as a **full-time tradigital artist**. **RJW** understands that creating, nurturing and maintaining such a community will require patience, hard work and perseverance, and is unlikely to appear overnight - *however, one always hopes for that unexpected viral success..!*  
+
+  - **Global Brand Goals:** Fast, friendly, efficient and reliable service. Easy to use, secure and trustworthy.
+
+  - **Product:** Good quality, great looking, well produced and finished art products. Affordability. Value for money.
+
+  - **Service:** Reliable, quality custom art, hand produced to user specification, in a timely manner. Competitively priced.
+
+*Which marketing strategies would offer the best way(s) to meet these goals?*
+
+Due to reasons detailed further below, **RJW ARTSTUFF** will primarily focus on ***SEO***, ***email marketing*** and ***organic social media marketing*** through **RJW ARTSTUFF** social media channels.
+
+***Core Marketing Strategies***
+
+*Does **RJW ARTSTUFF** currently have an effective advertising budget?*
+
+  No. Initially **RJW ARTSTUFF** plans to utilise as many *free* and *low-cost web marketing options* as resources & time allow for. As a one-man studio, generally with several projects underway at any given time, **RJW** rarely has the extra time required for extensive additional content creation at present. 
+
+  **Outcome:** Both **Product** and **Service** propositions will rely initially on ***free and low-cost web marketing techniques:*** 
+
+  - **Good SEO:** A robust initial set of short- and long-tailed keywords, which will be monitored and updated using feedback from **rankingCoach**
+
+  - *Semi-regular, non-spammy email marketing:*
+
+    **Product and Service:** *Email/newsletter* communications sent semi-regularly to subscribers, detailing *current offers*, *promotions* and *discounts* from across the site.
+
+      - Perpetual ***new subscriber/first order discounts*** for both propositions
+
+      - Regular ***new arrival*** and ***stock-clear offers*** to keep users engaged and product offerings fresh
+
+      - ***Seasonal/event-related promotions*** for **service** proposition
+
+  - Organic social media marketing:
+
+      - **Product and Service:** *Email/newsletter marketing content*, refactored and posted via **RJW ARTSTUFF** social media channels, in order to target and inform *non-subscribed users*
+
+      - Creation of a **Facebook Business Page** to leverage the exposure offered by the social media channel's huge *user base*, *sharing services* and *free marketplace features*
+
+  - Development of *really effective content marketing strategies* for **RJW ARTSTUFF** is currently restricted by a lack of the neccessary time and budgetary resources.
+  
+      - Therefore the *web marketing techniques* as detailed above will be utilised *as much as possible* to *develop, support and enhance* ***customer engagement and loyalty***.
+
+*Facebook Business Page Mock for **RJW ARTSTUFF***
+
+![FaceBook Business Page](static/readme/)
+
+----
+
+# **FEATURES**
+
+## **CURRENT FEATURES**
+
+**Full E-Commerce Functionality**
+
+As required...
+
+  ![E-COMM](static/readme/)
+  ![E-COMM](static/readme/)
+  ![E-COMM](static/readme/)
+
+**Full CRUD Functionality**
+
+As required...
+
+  ![CRUD Create](static/readme/)
+  ![CRUD Create](static/readme/)
+  ![CRUD Update](static/readme/)
+  ![CRUD Update](static/readme/)
+  ![CRUD Delete](static/readme/)
+      
+**Integrated Customer Feedback Functionality**
+
+As required...
+
+  ![FBACK](static/readme/)
+  ![FBACK](static/readme/)
+  ![FBACK](static/readme/)
+
+**Contact & Newsletter Functionality**
+
+As required...
+
+  ![CONTACT](static/readme/)
+  ![CONTACT](static/readme/)
+  ![CONTACT](static/readme/)
+  
+## ***FEATURES TO IMPLEMENT***
+
+- Identified at ***UXD Phase 2***, ... 
+
+- In addition I would also like to consider implementing ***future features*** such as but not limited to:
+
+- USER STORY #00: View FAQs
+  As a registered or unregistered user I can view a FAQs page so that I can search a list of common questions about the business
+
+- USER STORY #00: Newsletter Unsubscribe
+  As the site owner I can offer newsletter subscribers the option to unsubscribe through the website so that I can improve my GDPR compliance by simplifying the users unsubscribe process further
+
+  A link at the bottom of all email marketing will allow users to unsubscribe from the newsletter. However, a feature to allow on-site unsubscriptions, which would also help with GDPR compliance, would be desirable. 
+
+- USER STORY #00: Live User Ratings
+  As the site owner I can collect and process individual user ratings with existing product ratings so that I can update the product rating with real-time data
+
+  At present the user feedback feature captures and stores individual user ratings; ideally these user ratings will be averaged and added to the existing product ratings 
+
+Real-time product ratings, FAQs, TOS, T&Cs and on-site newsletter unsubs were/are all desirable additions to the site. Unfortunately these, and a few others still, fell outside the scope of this current project.
+
+----
 
 # **TECHNOLOGIES**
 
@@ -303,73 +522,6 @@ The main database used for this Project was **ElephantSQL**, as an installed add
 When the app and its models were created and implemented, `python manage.py makemigrations` was run in the terminal to create the initial model package and `python manage.py migrate` was then used to apply the model to the database and create the table.
 Where possible, first-time-right methodology was approached when creating the models to avoid to many alterations to the models and the database table through multiple `makemigrations` and `migrate` commands.
 
-----
-
-# **FEATURES**
-
-## **CURRENT FEATURES**
-
-**Full E-Commerce Functionality**
-
-As required...
-
-  ![E-COMM](static/readme/)
-  ![E-COMM](static/readme/)
-  ![E-COMM](static/readme/)
-
-**Full CRUD Functionality**
-
-As required...
-
-  ![CRUD Create](static/readme/)
-  ![CRUD Create](static/readme/)
-  ![CRUD Update](static/readme/)
-  ![CRUD Update](static/readme/)
-  ![CRUD Delete](static/readme/)
-      
-**Integrated Customer Feedback Functionality**
-
-As required...
-
-  ![FBACK](static/readme/)
-  ![FBACK](static/readme/)
-  ![FBACK](static/readme/)
-
-**Contact & Newsletter Functionality**
-
-As required...
-
-  ![CONTACT](static/readme/)
-  ![CONTACT](static/readme/)
-  ![CONTACT](static/readme/)
-
-**roundSlider jQuery Input**
-
-I was looking for a cool and slick way for registered users to post their rating scores and found **roundSlider** (https://roundsliderui.com/), a fully customisable circular slider input - I was sold! Although not a strong Scripter, with a little tinkering and experimenting on their excellent jsfiddle playground, I'm pleased with the final implementation. There are some issues with alignment I couldn't spare the time to fathom but, despite this, overall my favourite feature! 
-
-![Cold rating](static/readme/anticipator_screens/small_screen_pngs/site_small/rs_zero.png)
-![Mid rating](static/readme/anticipator_screens/small_screen_pngs/site_small/rs_warm.png)
-![Scorch rating](static/readme/anticipator_screens/small_screen_pngs/site_small/rs_scorch.png)
-
-- Easily customisable **Tooltip labels**:
-
-![rs temps](static/readme/anticipator_screens/small_screen_pngs/site_small/rs_js_temps.png)
-
-- **Average Ratings** update on page refresh reflecting freshly calculated Average Rating!
-
-![Rating averages](static/readme/anticipator_screens/small_screen_pngs/site_small/rs_avg_1.png)
-![Rating averages](static/readme/anticipator_screens/small_screen_pngs/site_small/rs_avg_2.png)
-  
-## ***FEATURES TO IMPLEMENT***
-
-- Identified at ***UXD Phase 2***, ... 
-
-- In addition I would also like to consider implementing ***future features*** such as but not limited to:
-  - ...
-  - ...
-  - ...
-
-----
 
 # **TESTING**
 
