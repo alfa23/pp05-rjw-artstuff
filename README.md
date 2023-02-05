@@ -413,9 +413,11 @@ Due to reasons detailed further below, **RJW ARTSTUFF** will primarily focus on 
   
       - Therefore the *web marketing techniques* as detailed above will be utilised *as much as possible* to *develop, support and enhance* ***customer engagement and loyalty***.
 
+Course-related web marketing materials; [Content Considerations - Connect Page](static/readme/seo_web_marketing_kwords/pp05_connect_content.pdf) and [source support doc for ***E-Commerce Business Model***](static/readme/seo_web_marketing_kwords/pp05_web_marketing.pdf).
+
 *Facebook Business Page Mock for **RJW ARTSTUFF***
 
-![FaceBook Business Page](static/readme/)
+![FaceBook Business Page](static/readme/site/pp05_facebook_business_page_mock.png)
 
 ----
 
@@ -423,43 +425,71 @@ Due to reasons detailed further below, **RJW ARTSTUFF** will primarily focus on 
 
 ## **CURRENT FEATURES**
 
-**Full E-Commerce Functionality**
+**Site-wide Functionality**
 
 As required...
 
-  ![E-COMM](static/readme/)
-  ![E-COMM](static/readme/)
-  ![E-COMM](static/readme/)
+  ![Index](static/readme/site/pp05_site_index.jpg) 
+
+***User sign up, sign in and sign out***
+
+  ![OTHER](static/readme/site/pp05_site_sign_up.jpg) 
+  ![OTHER](static/readme/site/pp05_site_sign_in.jpg) 
+  ![OTHER](static/readme/site/pp05_site_sign_out.jpg) 
+
+**Full E-Commerce Functionality**
+
+Complete User Experience to view all **RJW ARTSTUFF** products, sort by various means, add to basket, adjust bag contents and securely check out, if they so wish. User-dismissable contextual toast messaging exists site-wide for all user interactions.
+
+  ![View all products](static/readme/site/pp05_site_products_all.jpg) View all products with integrated search & sort functionality.
+
+  ![View detailed product info](static/readme/site/pp05_site_products_detail.jpg) View detailed info and any user feedback for a product, with options to change quantities, choose sizes where appropriate, add to bag or return to products.
+
+  ![View ArtCart](static/readme/site/pp05_site_artcart.jpg) View ArtCart to see current items for purchase, add or remove items, checkout or return to products.
+
+  ![Secure checkout page](static/readme/site/pp05_site_checkout.jpg) Secure checkout page powered by Stripe; requires entry of user details and valid (test: 4242 4242 4242 4242, any future date, CVC & Zip Code) card details to proceed. Final time user has the option to adjust Cart contents before purchasing.
+
+  ![Checkout success page](static/readme/site/pp05_site_checkout_success.jpg) Checkout success page providing customers with an on-screen order summary and message that an email record will also be issued. 
 
 **Full CRUD Functionality**
 
-As required...
+***Integrated Site Owner CRUD Functionality***
 
-  ![CRUD Create](static/readme/)
-  ![CRUD Create](static/readme/)
-  ![CRUD Update](static/readme/)
-  ![CRUD Update](static/readme/)
-  ![CRUD Delete](static/readme/)
+Site owner has in-browser functionality to add new products, edit existing and delete out of stock/sold out/unrequired products from the store
+
+  ![Add a product](static/readme/site/pp05_site_products_add.jpg) Add a product page allows superusers to add Products through the browser.
+
+  ![Edit a product](static/readme/site/pp05_site_products_edit.jpg) Edit a product page loads pre-filled with existing product data.
+
+The ***delete functionality*** for products currently doesn't use a template page or validation method - consequently **RJW** currently needs to be sure before hitting ***delete*** on any products! This will be a primary focus for the next iteration of this project. 
       
-**Integrated Customer Feedback Functionality**
+***Client-facing User Feedback CRUD Functionality***
 
-As required...
+Full ***client-facing CRUD functionality*** is offered to users through a *product feedback system*. Once registered and logged in a ***Leave Feedback*** button is made available directly underneath the Customer Feedback section on the product detail page. A dedicated My Feedback link is also enabled in the user's My Stuff tab, where users can go to manage their posted feedbacks. In an effort to populate all products with some comments, users currently enjoy the ability to leave feedback on any product, whether they have purchased it or not. Functionality to only allow users to feedback on products they own may be introduced at a later time. 
 
-  ![FBACK](static/readme/)
-  ![FBACK](static/readme/)
-  ![FBACK](static/readme/)
+  ![If no feedback](static/readme/site/pp05_site_feedback_none.jpg) If a user is logged in the ***Leave Feedback*** button is enabled below the comments in the ***Customer Feedback*** section. If no feedback currently exists for a product a simple *no feedback* message is displayed instead.
+  ![Add feedback](static/readme/site/pp05_site_feedback_add.jpg) Clicking the link takes the user to the ***add feedback*** page, where the user is presented with the image and title of the product they are giving their feedback on.  The user can choose to post or cancel, both result in a redirect back to the product page; any just-posted feedback appears in the *Customer Feedback* section immediately.
+  ![Already fed](static/readme/site/pp05_site_feedback_already_sub.jpg) Already fed
+  ![View feedback](static/readme/site/pp05_site_feedback_all.jpg) Users are able to view and manage their feedbacks from their My Feedback page...
+  ![Edit feedback](static/readme/site/pp05_site_feedback_edit.jpg) Edit feedback
+  ![Delete feedback](static/readme/site/pp05_site_feedback_deleted.jpg) delete feedback
 
 **Contact & Newsletter Functionality**
 
 As required...
 
-  ![CONTACT](static/readme/)
-  ![CONTACT](static/readme/)
-  ![CONTACT](static/readme/)
+  ![Connect](static/readme/site/pp05_site_connect.jpg) 
+  ![Connect success](static/readme/site/pp05_site_connect_success.jpg) 
+  ![Newsletter](static/readme/site/pp05_site_news_sub_success.jpg) 
   
-## ***FEATURES TO IMPLEMENT***
+**Other Functionality**
 
-- Identified at ***UXD Phase 2***, ... 
+As required...
+
+  ![Profile](static/readme/site/pp05_site_profile.jpg) 
+  ![Order history](static/readme/site/pp05_site_order_history.jpg) 
+  
+## ***FEATURES TO IMPLEMENT*** 
 
 - In addition I would also like to consider implementing ***future features*** such as but not limited to:
 
