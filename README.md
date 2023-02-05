@@ -19,7 +19,7 @@ A live version of the site can be found [here](https://pp05-rjw-artstuff.herokua
 The application uses **Django 3** to encourage rapid development, by utilising a *model-template-view* approach.
 In conjunction with **Django**, **sqlite** was used in the Project's inception phase as a database for local testing. **Sqlite** is self-contained highly reliable, SQL database engine that includes all the normal relational database management features. Later, development was switched to **ElephantSQL**, to ensure any data entered was visible in the deployed application. **ElephantSQL** provides an open-source, fully technical and easy-to-use object-relational database management system.
 
-The project is version controlled via **Git** & **Github** and is deployed via **Heroku**. All environment & secret variables are stored in an `env.py` file, which is then held in a `.git-ignored` file, ensuring project integrity is held to a high security standard, in relation to project and present day requirements.
+The project is version controlled via **Git** & **Github** and is deployed via **Heroku**. All environment & secret variables are stored in an `env.py` file, which is then held in a `.git-ignored` file, ensuring project integrity is held to a high security standard, in relation to project and present day requirements. The online payment system utilised in this project is provided by **Stripe**.
 
 Using **Django** and the above Database methods the **site owner**, as an administrator for the application, has complete access to a custom Admin dashboard where they can ***Create***, ***Read***, ***Update*** and ***Delete*** records for each of the application models as appropriate. In-built functionality also ensures the ability to maintain, add to, delete and curate the database from directly within the **RJW ARTSTUFF** website, via the ***Product Management*** link. Client-facing ***CRUD functionality*** is provided to **registed site users** through the ability to ***create***, ***read***, ***update*** and ***delete*** feedback on any product on the site. Finally, a **Connect** page provides users with the opportunity to initiate their own *custom art project* by completeing a ***contact form***, in addition to a ***newsletter subscription*** link, where they can choose to subscribe to the **RJW ARTSTUFF** newsletter. 
 
@@ -214,7 +214,7 @@ As a registered user I can receive an email confirming account registration so t
 | US #30: Contact - Newsletter Sign Up |  5  |  4  |
 | TOTAL: |: 150 :| 144 |
 
-***Proposed Production:*** The project will include all the features, as identified above, in order to build the *minimum viable product* (**MVP**). Completing the work in manageable ***sprints***, organised with the help of **GitHub's** baked-in *issues* and *milestones project features*, to produce the *robust viable solution* required.  
+***Proposed Production:*** The project will include all the features, as identified above, in order to build the *minimum viable product* (**MVP**). Completing the work in manageable ***sprints***, organised with the help of **GitHub's** baked-in ***issues*** and ***milestones** project features*, to produce the *robust viable solution* required.  
 
 ----
 
@@ -227,6 +227,8 @@ As a registered user I can receive an email confirming account registration so t
 ![ARTSTUFF sitemap](static/readme/pp05_wf_desktop/pp05_wf_desk_site_map.jpg)
 
 - Header and navigation consistent site-wide
+
+- Smooth and consistent site performance & styling across all devices
 
 - Links and forms provide clear feedback to users
 
@@ -427,14 +429,18 @@ Course-related web marketing materials; [Content Considerations - Connect Page](
 
 **Site-wide Functionality**
 
-As required...
+Perisistent header on *index/home page* appears across the site. Comprises of; a left-aligned ***home-BrandLink***; centre-aligned ***search box*** and ***main nav bar***, with links to categories and related listings; and a right-aligned set of 3 links: The leftmost links to the ***Connect*** page (no login required), rightmost links to to the ***ArtCart*** page and the centre provides a dropdown with initial options to ***Sign Up*** or ***Sign In***.
 
   ![Index](static/readme/site/pp05_site_index.jpg) 
 
 ***User sign up, sign in and sign out***
 
+Consistently styled AllAuth-driven account pages.
+
   ![OTHER](static/readme/site/pp05_site_sign_up.jpg) 
+
   ![OTHER](static/readme/site/pp05_site_sign_in.jpg) 
+
   ![OTHER](static/readme/site/pp05_site_sign_out.jpg) 
 
 **Full E-Commerce Functionality**
@@ -469,25 +475,27 @@ Full ***client-facing CRUD functionality*** is offered to users through a *produ
 
   ![If no feedback](static/readme/site/pp05_site_feedback_none.jpg) If a user is logged in the ***Leave Feedback*** button is enabled below the comments in the ***Customer Feedback*** section. If no feedback currently exists for a product a simple *no feedback* message is displayed instead.
   ![Add feedback](static/readme/site/pp05_site_feedback_add.jpg) Clicking the link takes the user to the ***add feedback*** page, where the user is presented with the image and title of the product they are giving their feedback on.  The user can choose to post or cancel, both result in a redirect back to the product page; any just-posted feedback appears in the *Customer Feedback* section immediately.
-  ![Already fed](static/readme/site/pp05_site_feedback_already_sub.jpg) Already fed
-  ![View feedback](static/readme/site/pp05_site_feedback_all.jpg) Users are able to view and manage their feedbacks from their My Feedback page...
-  ![Edit feedback](static/readme/site/pp05_site_feedback_edit.jpg) Edit feedback
-  ![Delete feedback](static/readme/site/pp05_site_feedback_deleted.jpg) delete feedback
+  ![Already fed](static/readme/site/pp05_site_feedback_already_sub.jpg) Although they have the ability to feedback on any product, users are limited to one feedback per product. If they try to feedback again on a product they are refused and notified through the site's toast messaging.
+  ![View feedback](static/readme/site/pp05_site_feedback_all.jpg) Users are able to view and manage their feedbacks from their My Feedback page. Clicking on the title of an existing feedback in their list, should they have any, will allow users to open and manage any specific feedbacks they have posted. 
+  ![Edit feedback](static/readme/site/pp05_site_feedback_edit.jpg) When users choose to edit feedback they are taken to a pre-populated update page, where they can choose to edit & update, cancel their editing and return to My Feedback, or delete the post. 
+  ![Delete feedback](static/readme/site/pp05_site_feedback_deleted.jpg) As with product deletion, feddback deletion doesn't currently employ a separate template or validation the user really wants to delete. Again, this would be a prime goal of future iterations.
 
 **Contact & Newsletter Functionality**
 
-As required...
+Any user, registered or unregistered, has the ability to access RJW ARTSTUFF's ***Connect*** page. 
 
-  ![Connect](static/readme/site/pp05_site_connect.jpg) 
-  ![Connect success](static/readme/site/pp05_site_connect_success.jpg) 
-  ![Newsletter](static/readme/site/pp05_site_news_sub_success.jpg) 
+  ![Connect](static/readme/site/pp05_site_connect.jpg) The page comprises of a simple contact form and related messaging regarding initiating custom projects, a section containg a form to capture the email details of anyone wishing to subscribe to the RJW ARTSTUFF newsletter and a section of external links; Social Medias, Other Platforms RJW appears on and also to websites of some of the businesses RJW ARTSTUFF are proud to work alongside. 
+
+  ![Connect success](static/readme/site/pp05_site_connect_success.jpg) When a user has successfully submitted a custom project message they are taken to a success page, confirming that their message has been received and informing them of what to expect next. 
+
+  ![Newsletter](static/readme/site/pp05_site_news_sub_success.jpg) Upon successful subscription to the RJW ARTSTUFF newsletter users are notified via the site toast messaging.
   
 **Other Functionality**
 
-As required...
+Users also have the ability to save their details to speed up future checkouts, if they so wish. This data is available for them to view and update on their My Profile page, available when they have logged in. This page also displays any previous order details for the customer. Clicking the order number takes the user to a copy of that original order.
 
-  ![Profile](static/readme/site/pp05_site_profile.jpg) 
-  ![Order history](static/readme/site/pp05_site_order_history.jpg) 
+  ![User profile page](static/readme/site/pp05_site_profile.jpg) User profile page.
+  ![User order history view](static/readme/site/pp05_site_order_history.jpg) User order history view.
   
 ## ***FEATURES TO IMPLEMENT*** 
 
@@ -517,41 +525,89 @@ During the course of this project I have utilised the following technologies:
 ## **LANGUAGES, VERSION CONTROL and FRAMEWORKS**
 
 ### HTML, CSS, JS & Python - core languages used to create this CRUD application:
+
 - **JavaScript** (https://www.javascript.com/) was used to add interactivity and enrich the User eXperience.
+
 - **HTML5** (https://html.com/html5/) (HyperText Markup Language) was used for structuring & presenting site content.
+
 - **CSS** (https://www.css3.info/) (Cascading Style Sheets) was used to provide styling to the HTML.
+
 - **Python** (https://www.python.org/) 'Python is a programming language that lets you work quickly
 and integrate systems more effectively.'
 
-### VERSION CONTROL and FRAMEWORKS:
+### DATABASE MANAGEMENT
+
+- [**SQLite**](https://www.sqlite.com/) was used as a single-file database during development.
+
+- [**ElephantSQL**](https://www.elehantsql.com/) A free, open-source relational database management system emphasizing extensibility and technical standards compliance: "The most advanced open-source database, hosted in the cloud." 
+
+  Initially **Sqlite3** was used to test User Authentication, Registration & Login, and for testing the creation of product and category data. Later in development the project used both local & deployed databases and **ElephantSQL** was also utilised from that point forward.
+
+  When the app and its models were created and implemented, `python manage.py makemigrations` was run in the terminal to create the initial model package and `python manage.py migrate` was then used to apply the model to the database and create the table. Where possible, first-time-right methodology was approached when creating the models to avoid to many alterations to the models and the database table through multiple `makemigrations` and `migrate` commands.
+
+### VERSION CONTROL, FRAMEWORKS & LIBRARIES:
+
 - **Git** (https://git-scm.com) was used for version control (commit to **Git** and push to **GitHub**.)
+
 - **Gitpod** (https://www.gitpod.io/) was used to write my code; an online IDE linked to the **GitHub** repository.
+
 - **GitHub** (https://github.com/) was used to create the repository and store the project's code after being pushed from **Git**.
+
 - **Bootstrap Framework** (https://getbootstrap.com/) was used as the core structuring layout for the application, ensuring mobile-first design and screen size fluidity.
+
 - **Bootstrap's Imported Javascript** & **JQuery** (https://getbootstrap.com/docs/4.3/getting-started/introduction/#js) used for Responsive Navbar expand & collapse, **roundSlider** and alert messages timeout functionality.
+
 - **Django** (https://www.djangoproject.com/) was used as the architectural engine following the *model-template-view* approach.
+
+- **Google Fonts** (https://fonts.google.com) used for all fonts utilised in the project.
+
+- **Font Awesome Icons** (https://fontawesome.com/icons?d=gallery) used site-wide to add icons for aesthetic and UX purposes.
+
+### PACKAGES & DEPENDENCIES:
+
+- **Django AllAuth** (https://django-allauth.readthedocs.io/en/latest/) used for user authentication, registration, and account management.
+
+- **Django Crispy Forms** (https://django-crispy-forms.readthedocs.io/en/latest/) used to control the rendering of forms. 
+
+- **Django Countries** (https://pypi.org/project/django-countries/) used to provide country choices for use with forms and a country field for models.
+
+- **Pillow** (https://pypi.org/project/Pillow/) used to add image processing capabilities.  
+ 
+- **Gunicorn** (https://gunicorn.org/) used as Python WSGI HTTP Server for UNIX to support the deployment of Django applications.
+
+### PAYMENT SERVICE:
+
+- **Stripe** (https://stripe.com/) used to process all online transactions.
+
+### CLOUD STORAGE:
+
+- **Amazon Web Service S3** (https://aws.amazon.com/s3/) used to store all static and media files in production.
+
+### OTHER TOOLS AND PROGRAMS:
+
 - **Heroku** (https://www.heroku.com/) A cloud platform as a service enabling deployment of this **CRUD application**.
 
-## **TOOLS USED**
-- **ElephantSQL** A free, open-source relational database management system emphasizing extensibility and technical standards compliance: "The most advanced open-source database, hosted in the cloud." 
 - **Balsamiq** (https://balsamiq.com) used to generate mobile and desktop wireframes.
+
 - **favicon** (https://www.favicon.cc/) was used to create a **custom favicon** for the project: ![favicon](static/favicon.ico)
-- **roundSlider** (https://roundsliderui.com/) is a **jQuery plugin** that allows the user to select a value. Used to input and update *User Ratings* on the site. 
+
 - **Google Chrome Dev Tools** (https://www.google.com/intl/en_uk/chrome/) used to debug & test source code using HTML5 and to test site responsiveness, also assisted in identifying the correct style properties to override some **Bootstrap** styling.
-- **Google Fonts** (https://fonts.google.com) used for all fonts utilised in the project.
+
 - **amiresponsive** (http://ami.responsivedesign.is/) used to check how responsive the site is on different devices.
+
 - **JSHint** (https://jshint.com/), [**W3C Markup**] (https://validator.w3.org/) and [**W3C Jigsaw**] (http://jigsaw.w3.org/css-validator/) used to validate all source **JavaScript**, **HTML** & **CSS** code.
+
 - **CI Python Linter** (https://pep8ci.herokuapp.com/) ***Code Institute's*** very own linter, used to check **Python code** is consistent with *PEP8* requirements.
-- **Font Awesome Icons** (https://fontawesome.com/icons?d=gallery) used for social icons in footer and site-wide iconography.
+
+- **WebAIM** (https://webaim.org/resources/contrastchecker/) used to verify the contrast radio for the color on the website.
+
+- **json formatter** (https://jsonformatter.org/) used to generate initial categories.json & products.json fixtures. 
+
+- **Bulk Resize Photos** (https://bulkresizephotos.com/en) used to resize & optimise site & readme media.
+
 - **ToC** (https://) used to generate ReadMe **Table of Content**.
 
-## Database
-
-The main database used for this Project was **ElephantSQL**, as an installed add-on to the deployed Heroku Application. **Sqlite3** was used initially to test User Authentication, Registration & Login, and for testing the creation of Game data. However later in development I moved to local & deployed testing so **ElephantSQL** was utilised from that point on.
-
-When the app and its models were created and implemented, `python manage.py makemigrations` was run in the terminal to create the initial model package and `python manage.py migrate` was then used to apply the model to the database and create the table.
-Where possible, first-time-right methodology was approached when creating the models to avoid to many alterations to the models and the database table through multiple `makemigrations` and `migrate` commands.
-
+----
 
 # **TESTING**
 
@@ -564,18 +620,53 @@ Where possible, first-time-right methodology was approached when creating the mo
 
 | .html PAGE | RESULT |
 |:-----:|:-----:|
-| base | [VIEW](static/readme/) |
-| other | [VIEW](static/readme/) |
-| other | [VIEW](static/readme/) |
-| other | [VIEW](static/readme/) |
-| other | [VIEW](static/readme/) |
-| other | [VIEW](static/readme/) |
-| login | [VIEW](static/readme/) |
-| logout | [VIEW](static/readme) |
-| signup | [VIEW](static/readme) |
+| base | [VIEW](static/readme/code_validation/html/pp05_val-html_templates_base.jpg) |
+| index | [VIEW](static/readme/code_validation/html/pp05_val-html_index.jpg) |
+| signup | [VIEW](static/readme/code_validation/html/pp05_val-html_templates_signup.jpg) |
+| login | [VIEW](static/readme/code_validation/html/pp05_val-html_templates_login.jpg) |
+| logout | [VIEW](static/readme/code_validation/html/pp05_val-html_templates_logout.jpg) |
+| 404 | [VIEW](static/readme/code_validation/html/pp05_val-html_templates_404.jpg) |
+| main-nav | [VIEW](static/readme/code_validation/html/pp05_val-html_templates_main-nav.jpg) |
+| products | [VIEW](static/readme/code_validation/html/pp05_val-html_products_products.jpg) |
+| product_detail | [VIEW](static/readme/code_validation/html/pp05_val-html_products_product_detail.jpg) |
+| bag | [VIEW](static/readme/code_validation/html/pp05_val-html_bag_bag.jpg) |
+| bag-total | [VIEW](static/readme/code_validation/html/pp05_val-html_bag_bag-total.jpg) |
+| checkout-buttons | [VIEW](static/readme/code_validation/html/pp05_val-html_bag_checkout-buttons.jpg) |
+| product-image | [VIEW](static/readme/code_validation/html/pp05_val-html_bag_product-image.jpg) |
+| product-info | [VIEW](static/readme/code_validation/html/pp05_val-html_bag_product-info.jpg) |
+| quantity-form | [VIEW](static/readme/code_validation/html/pp05_val-html_bag_quantity-form.jpg) |
+| add_product | [VIEW](static/readme/code_validation/html/pp05_val-html_products_add_product.jpg) |
+| edit_product | [VIEW](static/readme/code_validation/html/pp05_val-html_products_edit_product.jpg) |
+| checkout | [VIEW](static/readme/code_validation/html/pp05_val-html_checkout.jpg) |
+| checkout_success | [VIEW](static/readme/code_validation/html/pp05_val-html_checkout_success.jpg) |
+| contact | [VIEW](static/readme/code_validation/html/pp05_val-html_contact.jpg) |
+| contact_success | [VIEW](static/readme/code_validation/html/pp05_val-html_contact_success.jpg) |
+| view_feedback | [VIEW](static/readme/code_validation/html/pp05_val-html_feedback_view_feedback.jpg) |
+| add_feedback | [VIEW](static/readme/code_validation/html/pp05_val-html_feedback_add_feedback.jpg) |
+| edit_feedback | [VIEW](static/readme/code_validation/html/pp05_val-html_feedback_edit_feedback.jpg) |
+| profile | [VIEW](static/readme/code_validation/html/pp05_val-html_profile.jpg) |
+| mobile-top-header | [VIEW](static/readme/code_validation/html/pp05_val-html_templates_mob-top-head.jpg) |
+| toast_error | [VIEW](static/readme/code_validation/html/pp05_val-html_templates_toast_error.jpg) |
+| toast_info | [VIEW](static/readme/code_validation/html/pp05_val-html_templates_toast_info.jpg) |
+| toast_success | [VIEW](static/readme/code_validation/html/pp05_val-html_templates_toast_success.jpg) |
+| toast_warning | [VIEW](static/readme/code_validation/html/pp05_val-html_templates_toast_warning.jpg) |
+| other | [VIEW](static/readme/code_validation/html/) |
+| other | [VIEW](static/readme/code_validation/html/) |
+| other | [VIEW](static/readme/code_validation/html/) |
+| other | [VIEW](static/readme/code_validation/html/) |
+| other | [VIEW](static/readme/code_validation/html/) |
+| other | [VIEW](static/readme/code_validation/html/) |
 
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
+
+| .css PAGE | RESULT |
+|:-----:|:-----:|
+| base | [VIEW](static/readme/code_validation/css/pp05_val-css_base.jpg) |
+| checkout | [VIEW](static/readme/code_validation/css/pp05_val-css_checkout.jpg) |
+| contact | [VIEW](static/readme/code_validation/css/pp05_val-css_contact.jpg) |
+| feedback | [VIEW](static/readme/code_validation/css/pp05_val-css_feedback.jpg) |
+| profiles | [VIEW](static/readme/code_validation/css/pp05_val-css_profiles.jpg) |
 
 <p>
     <a href="http://jigsaw.w3.org/css-validator/check/referer">
@@ -585,14 +676,15 @@ Where possible, first-time-right methodology was approached when creating the mo
     </a>
 </p>
 
-![W3C CSS](static/readme/)
-
 ## jshint Validator Testing 
 
 - JavaScript
   - No errors were returned when passing through the [JSHint validator](https://jshint.com/)
 
-![JSHint JS](static/readme/)
+| .js PAGE | RESULT |
+|:-----:|:-----:|
+| countryfield | [VIEW](static/readme/code_validation/js/pp05_val-js_countryfield.jpg) |
+| stripe_elements | [VIEW](static/readme/code_validation/js/pp05_val-js_stripe_elements.jpg) |
 
 ## PEP8 Validator Testing
 
@@ -601,27 +693,61 @@ Where possible, first-time-right methodology was approached when creating the mo
 
 | APP | .py FILE | RESULT |
 |:-----:|:-----:|:-----:|
-| artstuff | urls | [VIEW](static/readme/) |
-| app | admin | [VIEW](static/readme/anticipator_screens/code_validation/python/cipl_xbox_admin.png) |
-| app | forms | [VIEW](static/readme/) |
-| app | managers | [VIEW](static/readme/) |
-| app | models | [VIEW](static/readme/) |
-| app | urls | [VIEW](static/readme/) |
-| app | views | [VIEW](static/readme/) |
+| artstuff | urls | [VIEW](static/readme/code_validation/python/) |
+| bag | context | [VIEW](static/readme/code_validation/python/pp05_val-py_bag_contexts.jpg) |
+| bag | urls | [VIEW](static/readme/code_validation/python/pp05_val-py_bag_urls.jpg) |
+| bag | views | [VIEW](static/readme/code_validation/python/pp05_val-py_bag_views.jpg) |
+| checkout | admin | [VIEW](static/readme/code_validation/python/pp05_val-py_checkout_admin.jpg) |
+| checkout | forms | [VIEW](static/readme/code_validation/python/pp05_val-py_checkout_forms.jpg) |
+| checkout | models | [VIEW](static/readme/code_validation/python/pp05_val-py_checkout_models.jpg) |
+| checkout | signals | [VIEW](static/readme/code_validation/python/pp05_val-py_checkout_signals.jpg) |
+| checkout | urls | [VIEW](static/readme/code_validation/python/pp05_val-py_checkout_urls.jpg) |
+| checkout | views | [VIEW](static/readme/code_validation/python/pp05_val-py_checkout_views.jpg) |
+| checkout | wh_handler | [VIEW](static/readme/code_validation/python/pp05_val-py_checkout_wh_handler.jpg) |
+| checkout | webhooks | [VIEW](static/readme/code_validation/python/pp05_val-py_checkout_wh.jpg) |
+| contact | admin | [VIEW](static/readme/code_validation/python/pp05_val-py_contact_admin.jpg) |
+| contact | forms | [VIEW](static/readme/code_validation/python/pp05_val-py_contact_forms.jpg) |
+| contact | models | [VIEW](static/readme/code_validation/python/pp05_val-py_contact_models.jpg) |
+| contact | urls | [VIEW](static/readme/code_validation/python/pp05_val-py_contact_urls.jpg) |
+| contact | views | [VIEW](static/readme/code_validation/python/pp05_val-py_contact_views.jpg) |
+| feedback | admin | [VIEW](static/readme/code_validation/python/pp05_val-py_feedback_admin.jpg) |
+| feedback | forms | [VIEW](static/readme/code_validation/python/pp05_val-py_feedback_forms.jpg) |
+| feedback | models | [VIEW](static/readme/code_validation/python/pp05_val-py_feedback_models.jpg) |
+| feedback | urls | [VIEW](static/readme/code_validation/python/pp05_val-py_feedback_urls.jpg) |
+| feedback | views | [VIEW](static/readme/code_validation/python/pp05_val-py_feedback_views.jpg) |
+| home | urls | [VIEW](static/readme/code_validation/python/pp05_val-py_home_urls.jpg) |
+| home | views | [VIEW](static/readme/code_validation/python/pp05_val-py_home_views.jpg) |
+| products | admin | [VIEW](static/readme/code_validation/python/pp05_val-py_products_admin.jpg) |
+| products | forms | [VIEW](static/readme/code_validation/python/pp05_val-py_products_forms.jpg) |
+| products | models | [VIEW](static/readme/code_validation/python/pp05_val-py_products_models.jpg) |
+| products | urls | [VIEW](static/readme/code_validation/python/pp05_val-py_products_urls.jpg) |
+| products | views | [VIEW](static/readme/code_validation/python/pp05_val-py_products_views.jpg) |
+| products | widgets | [VIEW](static/readme/code_validation/python/pp05_val-py_products_widgets.jpg) |
+| profiles | forms | [VIEW](static/readme/code_validation/python/pp05_val-py_profiles_forms.jpg) |
+| profiles | models | [VIEW](static/readme/code_validation/python/pp05_val-py_profiles_models.jpg) |
+| profiles | urls | [VIEW](static/readme/code_validation/python/pp05_val-py_profiles_urls.jpg) |
+| profiles | views | [VIEW](static/readme/code_validation/python/pp05_val-py_profiles_views.jpg) |
+| rjw_artstuff | settings | [VIEW](static/readme/code_validation/python/pp05_val-py_rjw_settings.jpg) |
+| rjw_artstuff | urls | [VIEW](static/readme/code_validation/python/pp05_val-py_rjw_urls.jpg) |
+| rjw_artstuff | views | [VIEW](static/readme/code_validation/python/pp05_val-py_rjw_views.jpg) |
+| root | custom_storages | [VIEW](static/readme/code_validation/python/pp05_val-py_root_custom_sorages.jpg) |
+| root | manage | [VIEW](static/readme/code_validation/python/pp05_val-py_root_manage.jpg) |
 
 **Google Developer Tools**
 
 - I made use of the built-in **Chrome Dev Tools** to experiment and debug while coding, in addition to testing simulated responsive behaviour across a range of mobile and desktop devices, and finally checking all pages Performance using **Lighthouse**. 
 
-![example lighthouse](static/readme/)
+Performance scores were persistently sub-90%, predominantly due to issues relating to waits for external resources (Stripe, Bootstrap, etc.) and 'enormous network payloads' created by the higher resolution (2048px * 2048px) product images used on-site, something the site owner is not overly keen on changing given the nature of the business.
 
-More **Lighthouse** test results in this folder [**here**](static/readme/).
+![example lighthouse](static/readme/lighthouse/pp05_lighthouse_desk_product_all.jpg)
+
+More **Lighthouse** test results in this folder [**here**](static/readme/lighthouse/).
 
 **Response Testing**
 
 In order to make sure that **RJW ARTSTUFF** was responsive to all device sizes, I used [amiresponsive](http://ami.responsivedesign.is/)
 
-![amiresponsive](static/readme/)
+![amiresponsive](static/readme/am_i_responsive/pp05_am_i_responsive.jpg)
 
 ## **MANUAL TESTING**
 
@@ -646,18 +772,22 @@ In addition to my own testing a link to the project was shared to family & frien
 
 | TEST | OUTCOME | PASS/FAIL |
 |---|:---:|:---:|
-| All users can... | example.html/example.html | PASS |
-| All users can... | example.html/example.html | PASS |
+| All users can view, search and sort all products | products.html | PASS |
+| All users can view product details | product_detail.html | PASS |
 | All users can easily register or login to access user features | signup.html/login.html | PASS |
-| All users can... | example.html/example.html | PASS |
-| *Unregistered* users can't leave comments | signup.html/login.html | PASS |
-| *Unregistered* users can't leave/adjust ratings | signup.html/login.html | PASS |
+| All users can access the contact form and newsletter subscriptions | contact.html/contact_success.html | PASS |
+| *Unregistered* users can't leave product feedback | signup.html/login.html | PASS |
+| *Unregistered* users can't leave/adjust product ratings | signup.html/login.html | PASS |
 | Registered users can log out easily | logout.html | PASS |
-| Staff/admin users can easily create new data | example.html | PASS |
-| Staff/admin users can easily update existing data | example.html | PASS |
-| Staff/admin users can easily delete existing data | example.html | PASS |
-| Admin users can disapprove/remove comments (via Admin panel) | /admin | PASS |
-| Admin users can esily remove users & all associated data (via Admin panel) | /admin | PASS |
+| Staff/admin users can easily create new data | add_product.html | PASS |
+| Staff/admin users can easily update existing data | edit_product.html | PASS |
+| Staff/admin users can easily delete existing data | edit_product.html | PASS |
+| Registered users can view/add/edit/remove feedbacks | view_feedback.html/add_feedback.html/edit_feedback.html | PASS |
+| Registered users can easily view and updated saved profile data | profile.html | PASS |
+| Registered users can easily view their previous order history | profile.html | PASS |
+| Users can easily select, add, edit & purchase products  | bag.html/checkout.html/checkout_success.html | PASS |
+| Registered users can log out easily | logout.html | PASS |
+| Registered users can log out easily | logout.html | PASS |
 
 ----
 
@@ -680,172 +810,282 @@ In addition to my own testing a link to the project was shared to family & frien
   - Migrate all new changes to the database
   - Run the server to test
 
-- Setup project to use **Amazon S3** and **ElephantSQL**
+- Setup project **Heroku** to use **Amazon S3** and **ElephantSQL** when deployed.
  
   - Create new **Heroku app**
     - Sign into **Heroku**
     - Select *New*
     - Select *Create new app*
-    - Enter a relevant app name
+    - Enter a relevant app name: `pp05-rjw-artstuff`
     - Select appropriate region
     - Select the *Create app* button
 
-  - Attach **ElephantSQL database**
-    - In **Heroku/Resources**
-      - Search add-ons for *Postgres*
-      - Select: *Heroku Postgres*
-      - Submit order form
+  - Create & attach **ElephantSQL database**
+
+    - Log in to **ElephantSQL** to dashboard
+    - Create `New Instance` and name: `pp05_rjw_artstuff`
+    - Select free plan: `Tiny Turtle`
+    - Select region and data centre `EU-West-1 (Ireland) | Amazon Web Services`
+    - Click `review`, check and click `Create Instance`
+    - Return to dashboard, select newly-created instance; in the `URL` section click to copy `URL` to clipboard
+
+    - Goto Heroku dashboard and open `settings` tab of **Heroku** app `pp05-rjw-artstuff`
+    - Add `DATABASE_URL` Config Var and paste in **ElephantSQL** value  
+
+  - Connect **ElephantSQL** database to **Heroku** via **GitPod**
+
+    - In GitPod terminal type: `pip3 install dj_database_url==0.5.0 pscopg2`
+    - Update `requirements.txt` with newly installed packages using terminal command `pip3 freeze > requirements.txt`
+    - Import **dj_database_url** beneath `import os` at the top of `settings.py`
+    - Edit `settings.py` `DATABASES` section to connect to ElephantSQL instead of local `sqlite3`:
+
+        # DATABASES = {
+        #     'default': {
+        #         'ENGINE': 'django.db.backends.sqlite3',
+        #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #     }
+        # }
+            
+        DATABASES = {
+            'default': dj_database_url.parse('your-database-url-here')
+        }
+    
+      **WARNING:** Don't committhis file! It will be removed shortly...
+
+    - Run migrations in the terminal using `python3 manage.py showmigrations`
+    - If a list of un-checked migrations appear, run migrations using `python3 manage.py migrate`
+    - Load fixtures in order, *categories* first followed by *products*
+      - `python3 manage.py loaddata categories`
+      - `python3 manage.py loaddata products`
+    - Create a new superuser using terminal command `python3 manage.py createsuperuser`
+    - To prevent exposing the database when pushing to GitHub, ammend `settings.py` and reconnect to local **sqlite** database. `DATABASE` setting in `settings.py` file should look like:
+
+          DATABASES = {
+              'default': {
+                  'ENGINE': 'django.db.backends.sqlite3',
+                  'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+              }
+          }
+    - Check **ElephantSQL** has received migrations by selecting `BROWSER` from left of the ElephantSQL database page
+    - Click `Table queries`, select `auth_user` and click `EXECUTE`
+    - The newly-created superuser data confirms a successful migration
+
+    - Ammend `settings.py` to reflect the following changes:
+          if 'DATABASE_URL' in os.environ:
+              DATABASES = {
+                  'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+              }
+          else:
+              DATABASES = {
+                  'default': {
+                      'ENGINE': 'django.db.backends.sqlite3',
+                      'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+                  }
+              }
+    
+    - Install gunicorn using terminal command `pip3 install gunicorn`
+    - Freeze gunicorn into `requirements.txt`: `pip3 freeze > requirements.txt`
+    - Create a root-level `Procfile` and create **Heroku** *web dyno* by typing:
+      - `web: gunicorn pp05_rjw_artstuff.wsgi:application` on the first line of the `Procfile` 
+    - Log in to **Heroku** via **GitPod terminal**: `heroku login -i` and using email and **Heroku** api key
+    - Temporarily disable collect static: `heroku config:set DISABLE_COLLECTSTATIC=1 --app pp05_rjw_artstuff` in the **GitPod** terminal
+    - Add **Heroku** `deployed_app_address` and `localhost` to `settings.py` / `ALLOWED HOSTS`
+    - Add, commit and push all changes 
+    - Push committed changes to Heroku using `git push heroku main`
+    - Test!
+
+    - Search and connect **GitHub** project repository in **Heroku/Deploy**
+    - Enable `Automatic deploys` in **Heroku**/Deploy, all local **GitHub** pushes now deploy to **Heroku**
+    - Goto **Amazon S3 Bucket**, create `Media` folder and import files using `upload`
+
+    - Go back to settings.py and replace the secret key setting with the call to get it from the environment, and use empty string as a default. 
+          ```
+          SECRET_KEY = os.environ.get('SECRET_KEY', '')
+          ```
+          Set debug to be true only if there's a variable called development in the environment.
+          ```
+          DEBUG = 'DEVELOPMENT' in os.environ
+          ```
+          
+
+## **AWS Bucket Creation**   
+
+All static and media files in this project are stored in [Amazon Web Services S3 bucket](https://aws.amazon.com/) which is a cloud based storage service. You can create your own bucket by following these steps:   
+- Go to [Amazon Web Service website](https://aws.amazon.com/) and click on Create An AWS Account, or login if you already have an account.  
+- Login to your new account, go to AWS Management Console and find service S3. Click on Create Bucket.   
+   - Give it a name (recommended naming your bucket to match the Heroku app name), choose region closest to you.  
+   - In Object Ownership section, choose ACLS enabled. and Bucket Owner Preffered.   
+   - Uncheck box 'Block All Public Access'. 
+   - Check box 'I acknowledge that the current settings might result in this bucket and the objects within becoming public.'  
+   - Click on Create Bucket, and your bucket is created.  
+- Click on your newly created bucket, and navigate to the Properties tab. Scroll down to the bottom until you find Static Website Hosting. Click on Edit, then enable. 
+   - Hosting type: choose Host a Static Website   
+   - Index document: index.html  
+   - Error document: error.html
+   - Click on Save Changes.  
+- Navigate to the Permissions tab. Scroll down to the bottom until you find Cross-origin resource sharing (CORS). Click on Edit, and paste in this Cors Configuration below, which is going to set up the required access between the Heroku app and this S3 bucket. Click on Save Changes. 
  
-  - Prepare ***environment*** and ***settings.py*** files
- 
-    - Create `env.py` file
-    - In `env.py`:Add `DATABASE_URL` with the **Postgres** `URL` from **Heroku**
-    - Get a randomly generated **SECRET_KEY** *e.g.* from [key generator](https://django-secret-key-generator.netlify.app/)
-    - In **Heroku**: Add `SECRET_KEY` + generated key to the `Config Vars`
-    - In ***settings.py***: Add `if` statement to prevent production server from erroring
-    - Replace insecure key with the environment variable for the `SECRET_KEY`
-    - Add **Heroku** database as the back end
-    - Migrate changes to new database
+          ```
+          [
+              {
+                "AllowedHeaders": [
+                    "Authorization"
+                ],
+                "AllowedMethods": [
+                    "GET"
+                ],
+                "AllowedOrigins": [
+                    "*"
+                ],
+                "ExposeHeaders": []
+              }
+          ]
+          ```   
+-Still on the Permissions tab, find Bucket policy, click on Edit, and then go to Policy Generator. 
+  - Select Type of Policy: choose S3 Bucket Policy   
+  - Effect: choose Allow   
+  - Principal: *   
+  - Actions: select GetObject   
+  - Fill in the Amazon Resource Name (ARN), from the Bucket ARN back in the Bucket Policy   
+  - Click on the Add Statement and then Generate Policy. Copy the policy and paste in the bucket policy editor.  
+  - Add a slash star on to the end of the resource key (because we want to allow access to all resources in this bucket). Click Save.
 
-  - Get static media files stored on **Cloudinary**
-    - Create **Cloudinary** account
-    - From the dashboard, copy the `API environment variable`
-    - In the *settings.py* file create a new environment variable for `CLOUDINARY_URL`
-    - Add the `CLOUDINARY_URL` variable to **Heroku**
-    - Add a temporary `Config Var` for `DISABLE_COLLECTSTATIC`
-    - In *settings.py* add **Cloudinary** as an installed app
-    - Add `static` and `media` file variables
-    - Add templates directory
-    - Change `DIR's` key to point to `TEMPLATES_DIR`
-    - Add **Heroku** hostname to `allowed hosts`
-    - Create directories for `media`, `static` and `templates` in the project workspace
-    - Create a `Procfile`
+      The resource key should look like this
+      ```  
+      "Resource": "arn:aws:s3:::YOUR_BUCKET_NAME/*",  
+      ```  
+   
+- Still on Permissions tab, go to Access Control List (ACL) section, click Edit and enable List for Everyone (public access), and accept the warning box.  
 
-- Deploy *rjw_artstuff* to **Heroku**
+- With the bucket ready, now we need to create a user to access it through another service called IAM which stands for Identity and Access Management. Go back to the service menu and open IAM.   
+   a. Create a group for our user to live in.  
+      Click User Groups, and then create a new group with a name you want. I gave the group the name: manage-shoes-and-more. Scroll down to the bottom and click on Create Group.     
+   b. Create an access policy giving the group access to the S3 bucket that has been created.  
+      - Click on Policy, and then Create Policy. Go to the JSON tab, and then select import managed policy, which will let us import one that AWS has pre-built for full access to S3. Search for S3, then import the AmazonS3FullAccess policy.   
+      - Because we only want to allow full access to our new bucket and everything within it, paste the bucket ARN (from the bucket policy page in s3) in the JSON editor.
 
-----
+          ```
+          "Resource": [
+            "arn:aws:s3:::YOUR_BUCKET_NAME",
+            "arn:aws:s3:::YOUR_BUCKET_NAME/*"
+          ]
+          ```  
 
-## **DEPLOYMENT**
+      Now click on Next:Tags, then click Next:Review. 
+      - Give the review policy a name and a description, then click Create Policy. The policy has now been created. 
+      
+   c. Finally, assign the user to the group so it can use the policy to access all our files.  
+      - Go to User Groups, and select the group. Go to the Permissions tab, open the Add Permissions dropdown, and click Attach Policies.  
+      - Select the policy and click Add permissions at the bottom.  
+      - Create a user to put in the group, by going to the Users page, and clicking Add Users.  
+      - Set a user name, give them access type: Programmatic access, and then click Next: Permissions.   
+      - Check on the group that has the policy attached. Click Next: Tags, then click Next: Review, and lastly Create User.     
+      - Download the csv file and save it.  
 
-This full stack application was developed using in-browser IDE **Gitpod Code** v1.73.1 and version controlled via local **(git)** and online **(github)** repository technologies. All secret environment variables were stored in an `env.py` file, which was added to a `.gitignore` file and out of the public repo. Those variables detailed in the `env.py` file were re-enacted in **Heroku/Settings** for this application under the `Config Vars` section, allowing the deployed site to utilise these secret variables.
 
-The terminal was used to deploy the project locally:
-- Create a repository on **GitHub** from the ***Code Institute full template***
-- Open repository in source code editor **(GitPod)**
-- Enter `python3 manage.py runserver` into the terminal
-- Open local host address on web browser
-- All local saved changes appear here
+## **Connect Django to AWS Bucket**
 
-Deploying this application was achieved by:
-- Pushing code from the IDE to **Github** via **Git** and the built-in **bash terminal**
-- Creating an app on **Heroku** & deploying it from same
-- Adding secret environment variables to the app's `Config Vars` in **Heroku/Settings** and assigning to the respective secret values held in the `env.py` for Live Deployment
-- In **Heroku/Deploy**, deployment method set to **Github**
-Final deployment to **Heroku**:
-- Set `debug = False` in *settings.py* file
-- Commit & push all files to **GitHub**
-- In **Heroku/Settings**: Remove `DISABLE_COLLECTSTATIC` from `Config Vars`
-- In **Heroku/Deploy**: Check auto deploy if required; click ***Deploy branch*** to deploy app 
+Note: If you've forked the repository, all of these steps are already done/ written on the files. Make sure you've installed all dependencies in the requirements.txt file, add all the AWS-related Config Vars to Heroku, and remove the DISABLE_COLLECTSTATIC variable from Heroku.   
 
-A live link to this project can be found **[here](https://pp05-rjw-artstuff.herokuapp.com/)**.
+Here are the steps to connect Django to AWS:  
+- Install two new packages: boto3 and django-storages. Freeze them into requirements.txt.   
 
-To clone the repository:
-- Select the Repository from **Github Dashboard**
-- Click on the green 'Clone or download' button
-- Click on the clipboard icon to the right of the `Git URL` to copy the web URL of the Clone
-- Open your preferred Integrated Development Environment (IDE) and navigate to the terminal window
-- Change the directory to where you want to clone the repository to
-- Paste the `Git URL` copied from above and click 'Ok'
-- Once open, create an `env.py` file and assign the *Database URL, Secret Key and other secret variables* - ensure the `env.py` is in the root project directory and add it to `.gitignore` to ensure any Secret details aren't exposed
+   ```
+   pip3 install boto3
+   pip3 install django-storages 
+   pip3 freeze > requirements.txt  
+   ```  
+
+- Add storages to the Installed Apps in settings.py.
+- In settings.py, we need to set cache control, set bucket configurations, set static and media files location, and override static and media URLs in production. We'll only want to do this on Heroku, so add an if statement as well.
+
+      ```
+      if 'USE_AWS' in os.environ:
+          # Cache control
+          AWS_S3_OBJECT_PARAMETERS = {
+            'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+            'CacheControl': 'max-age=94608000',
+          }
+
+          # Bucket Config
+          AWS_STORAGE_BUCKET_NAME = 'YOUR_BUCKET_NAME'
+          AWS_S3_REGION_NAME = 'YOUR_REGION'
+          AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+          AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+          AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+          # Static and media files
+          STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+          STATICFILES_LOCATION = 'static'
+          DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+          MEDIAFILES_LOCATION = 'media' 
+
+          # Override static and media URLs in production
+          STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+          MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+      ```
+
+   Set the Config Vars on Heroku. On your app's dashboard on Heroku, go to Settings and click Reveal Convig Vars. Set this variables:
+   Variables | Value
+   --- | ---
+   AWS_ACCESS_KEY_ID | your access key id from the csv file that you've downloaded before
+   AWS_SECRET_ACCESS_KEY | your secret access key from the csv file that you've downloaded before
+   USE_AWS | True    
+
+   Also remove the COLLECTSTATIC variable from the Config Vars.   
+
+- We then want to tell Django that in production we want to use S3 to store our static files whenever someone runs collectstatic, and that we sent any uploaded images to go there as well.  
+Create a custom_storages.py file in your project's root directory, and inside it, include the Static and Media Storage locations: 
+
+      ```
+      from django.conf import settings
+      from storages.backends.s3boto3 import S3Boto3Storage
+    
+
+      class StaticStorage(S3Boto3Storage):
+          location = settings.STATICFILES_LOCATION
+
+
+      class MediaStorage(S3Boto3Storage):
+          location = settings.MEDIAFILES_LOCATION
+      ```  
+
+- Finally, push these changes on Github.
+
+      ```
+      git add .
+      git commit -m "Your commit message"
+      git push
+      ```
+
+- Deploy *rjw_artstuff* to **Heroku**!
 
 ----
 
 ## **CHALLENGES, BUGS and FIXES**
 
-**IN-DEPLOYMENT BUG**
-
-### **Ongoing Bug Report: Short Description...**
-  
-  • *Issue:* ...
-  
-  • *Fix:* ...
-
-- **Example** Blurb..:
-
-  ![image](static/readme/)
-
-- **Example** Blurb..:
-
-  ![image](static/readme/)
-
-----
-
 **SOLVED BUGS**
 
-### **Bug: Short desc**
+### **Bug: %00 Errors on my deployed project
   
-  • *Issue:* ...
+  • *Issue:* After local development pushes, my deployed **Heroku** started throwing 500 errors
   
-  • *Fix:* ... 
+  • *Fix:* I had created several new apps in my local environment and these changes were not reflected in the **ElephantSQL** databases. A chat with **Code Institute** *Tutor Support* and a migration using Heroku in the terminal thankfully solved the issue. *Phew, thank you, Ed!*
 
-  ![image](static/readme/)
-  ![image](static/readme/)
+  ![DB bug](static/readme/bug/pp05_bug_1-1.jpg)
+  [Further bug files for this issue](static/readme/bug/)
 
 ----
-
-### **Bug: Short desc**
-  
-  • *Issue:* ...
-  
-  • *Fix:* ... 
-
-  ![image](static/readme/)
-  ![image](static/readme/)
-
-----
-
-### **Bug: Short desc**
-  
-  • *Issue:* ...
-  
-  • *Fix:* ... 
-
-  ![image](static/readme/)
-  ![image](static/readme/)
-
-----
-
-### **Bug: Short desc**
-  
-  • *Issue:* ...
-  
-  • *Fix:* ... 
-
-  ![image](static/readme/)
-  ![image](static/readme/)
-
-----
-
 ### **CONTRIBUTERS**
 
 Other coders code that I've referenced, learnt from, been inspired by or just plain borrowed:
-
-• **All document fonts** sourced from google fonts:
-
-• **All game images & info** is credited either under the **UCD Phase 5** IMAGERY section or in-copy within the application.
-
-• **Feature** Blurb from: https://
-
-• **Feature** Blurb from: https://
-
-• **Feature** Blurb from: https://
 
 ----
 
 ## **CREDITS**
 
-Firstly, I'd like to thank my family and folks for putting up with me during my studies! I'd also like to thank Mike, Aoife and the Code Institute Student Care team for their help and, well, care. Finally thanks go to my Mentor, Marcel, for his continuing support and advice. 
+Firstly, I'd like to thank my family and folks for putting up with me during my studies! Thanks must also go to my Mentor, Marcel, for his ongoinging support and advice. 
 
 ----
 
-![banner](static/readme/)
+![banner](static/readme/site/pp05_readme_banner.jpg)
